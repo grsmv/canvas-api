@@ -15,7 +15,9 @@ module Canvas
       end
 
       Parallel.map(course_modules, in_threads: course_modules.size) do |modul|
-        modul.items = update_items_with_remote_data.call items(course_id: course_id, module_id: modul.id)
+        unless modul.items_count.zero?
+          modul.items = update_items_with_remote_data.call items(course_id: course_id, module_id: modul.id)
+        end
         modul
       end
     end
