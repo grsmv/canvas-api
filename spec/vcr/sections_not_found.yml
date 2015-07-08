@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/400000/sections?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jul 2015 15:08:40 GMT
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=fTsAWRRBNjSt%2B5LmPEl0v6Z5kOSQH%2FI6cCFgMAG1mtUPbGwAVwNzf8qi0bZNYgX16hDFgNhry3MGFgEJRNjPng%3D%3D;
+        path=/; secure
+      - canvas_session=MoKHPss3HRcOVFFOCEt5Qw.R2ClLHTs1ds6HfUk6tWnuSFQCPR3q9_THtFtzBrAQjA2hqTh3u2FbZR-SAbJnnQxvcisaJhuv6-6gVMtmnafOEYUKIhNjJqgjVycOX0enIIhf_UhiYcBmScZWZN6ENL4.fepJSEqJIzgbNnUAkicfDl5IKOY.VZ08-A;
+        path=/; secure; HttpOnly
+      Status:
+      - 404 Not Found
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;b=1047436;m=1047436;u=0.11;y=0.01;d=0.07;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - b7faf5ed-daa9-473f-9769-938b407dddfc
+      X-Request-Cost:
+      - '0.1788817839999568'
+      X-Request-Processor:
+      - a023d96
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.296584'
+      X-Session-Id:
+      - b785680e19f8e55993692813e02a4744
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '100'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"message":"The specified resource does not exist."}],"error_report_id":265}'
+    http_version: 
+  recorded_at: Wed, 08 Jul 2015 15:08:40 GMT
+recorded_with: VCR 2.9.3

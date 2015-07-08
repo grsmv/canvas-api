@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/sections?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jul 2015 14:56:55 GMT
+      Etag:
+      - '"34abe4996f86f988f07774e11ade3791"'
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=%2FZnvUncpf5EZiDWdv6uihAgtdqh3HxuRqssNcERZ0P6T6I1jMkYo%2F36%2BDdP9zInXaU86nEBcNKfYp0MWBxOpnA%3D%3D;
+        path=/; secure
+      - canvas_session=r5DxAsATob0yHQiye6NwjQ.ifJ9-ux1707HyJ-tvvN0eqqU7HLpFEuCZ3lxHuUt4kvb0MKUynphd8YdoqBPYaBSywwCGy4paKcK8PdaVmavVh89fzDDUkOtzQw3KbYS4mjfCzPJITNqYq5WuAEB3zNS._O5Lfjo7_qCFoVPuuWGgZ0WMdiA.VZ06OA;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=sections;n=index;t=Course;i=40;b=1115228;m=1115228;u=0.22;y=0.01;d=0.09;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 44f4cb02-af9f-4c07-9645-7f390850041b
+      X-Request-Cost:
+      - '0.3069216530000273'
+      X-Request-Processor:
+      - a023c36
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.393668'
+      X-Session-Id:
+      - b71c6685951063fe05e87ae9aa01a4e4
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '201'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"course_id":40,"end_at":"2015-06-19T06:00:00Z","id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":"2015-06-01T06:00:00Z","sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-06-25T06:00:00Z","id":936,"name":"9950054222","nonxlist_course_id":null,"start_at":"2015-06-22T06:00:00Z","sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":1371,"name":"Spring
+        2016","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null}]'
+    http_version: 
+  recorded_at: Wed, 08 Jul 2015 14:56:56 GMT
+recorded_with: VCR 2.9.3

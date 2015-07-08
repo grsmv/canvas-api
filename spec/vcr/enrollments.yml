@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jul 2015 15:27:34 GMT
+      Etag:
+      - '"c0f24a335fd61d835437f50b103cef7f"'
+      Link:
+      - <https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?page=1&per_page=10>;
+        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?page=1&per_page=10>;
+        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?page=1&per_page=10>;
+        rel="last"
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=m3sEdpVTHU0FkHZNv1ShBgsY7kWynrDOyOtbowTlYgSwNkAArCdtJ0rVPHTuOs00fymBMcfJm6WKxDDzbYAbQA%3D%3D;
+        path=/; secure
+      - canvas_session=9WoP_GGWiEOQeLN1Tspa6A.9KlH2W2XAzCrCyurHQUTFHoEInVcv4zuvPC9PKZFFYadsKaHSRhr00jQ82tjHa39oZoVkIsFiiQybdxxFPDn9hm44Xx2EU_9S3aXP-_qX-ECCAs42C7X8QzooGITX6QY.LFGmJ2AMjhQdKTGXpjsSeBo9lTU.VZ1BZg;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=enrollments_api;n=index;t=Course;i=40;b=981900;m=981900;u=0.20;y=0.01;d=0.06;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 41cac8dc-6c71-4f9a-a3ab-900a8009a448
+      X-Request-Cost:
+      - '0.25547394500000287'
+      X-Request-Processor:
+      - a023d96
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.469672'
+      X-Session-Id:
+      - 9c0ae9d1568f4052e06fb4f7f83fc196
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '527'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"associated_user_id":null,"course_id":40,"course_section_id":1371,"created_at":"2015-07-07T14:44:12Z","end_at":null,"id":25384,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"StudentEnrollment","updated_at":"2015-07-07T14:44:12Z","user_id":3334,"enrollment_state":"invited","role":"StudentEnrollment","role_id":3,"last_activity_at":null,"total_activity_time":0,"sis_import_id":null,"grades":{"html_url":"https://softservepartnership.test.instructure.com/courses/40/grades/3334","current_score":null,"final_score":null,"current_grade":null,"final_grade":null},"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3334","user":{"id":3334,"name":"Andriy
+        Hunyak","sortable_name":"Hunyak, Andriy","short_name":"Andriy Hunyak","login_id":"ahunyak@softserveinc.com"}},{"associated_user_id":null,"course_id":40,"course_section_id":936,"created_at":"2015-06-18T10:23:12Z","end_at":null,"id":20213,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"StudentEnrollment","updated_at":"2015-07-07T10:26:28Z","user_id":3334,"enrollment_state":"invited","role":"StudentEnrollment","role_id":3,"last_activity_at":"2015-06-18T16:47:43Z","total_activity_time":7428,"sis_import_id":null,"grades":{"html_url":"https://softservepartnership.test.instructure.com/courses/40/grades/3334","current_score":42.5,"final_score":42.5,"current_grade":null,"final_grade":null},"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3334","user":{"id":3334,"name":"Andriy
+        Hunyak","sortable_name":"Hunyak, Andriy","short_name":"Andriy Hunyak","login_id":"ahunyak@softserveinc.com"}},{"associated_user_id":null,"course_id":40,"course_section_id":935,"created_at":"2015-06-17T12:12:20Z","end_at":null,"id":20211,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"StudentEnrollment","updated_at":"2015-07-07T10:26:28Z","user_id":3334,"enrollment_state":"active","role":"StudentEnrollment","role_id":3,"last_activity_at":"2015-06-18T16:47:43Z","total_activity_time":7428,"sis_import_id":null,"grades":{"html_url":"https://softservepartnership.test.instructure.com/courses/40/grades/3334","current_score":42.5,"final_score":42.5,"current_grade":null,"final_grade":null},"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3334","user":{"id":3334,"name":"Andriy
+        Hunyak","sortable_name":"Hunyak, Andriy","short_name":"Andriy Hunyak","login_id":"ahunyak@softserveinc.com"}}]'
+    http_version: 
+  recorded_at: Wed, 08 Jul 2015 15:27:34 GMT
+recorded_with: VCR 2.9.3

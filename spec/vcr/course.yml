@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jul 2015 13:58:51 GMT
+      Etag:
+      - '"f0fba8e571f11fb51c26c6604afa7a72"'
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=JLLt2SMGoRmAvc6d47Jf08hzwtRJBbPe7TC7P1kNVeNH5KOTdS3DLdbqtOmo0BGSnEuVgw1T94rVAd1%2Ba2FmkQ%3D%3D;
+        path=/; secure
+      - canvas_session=Lsztp1WT2hGnyYZcMrseaQ.topYm7CzqyJP7wvYF5UiYBsmNt4DL-HHUAA0QU98ccbG5rpZci5lbCfQmQg9boJ8HT0--DjqYqcvJDXJPBGvk3UuBSsINp40tbUPawydx0JT21CFpZDSASCaI1HKXPki.-xFCaiXEEDY7RW0Ojpy8xYJUMAk.VZ0smw;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=courses;n=show;b=984156;m=984156;u=0.10;y=0.01;d=0.03;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - c09d76ee-11c6-4d34-8fde-3a8102b5b695
+      X-Request-Cost:
+      - '0.12683459400002273'
+      X-Request-Processor:
+      - a023c36
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.195120'
+      X-Session-Id:
+      - 6f1ccaae5ac3882466d534fe00726316
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '388'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"account_id":39,"course_code":"9950054","default_view":"feed","enrollment_term_id":1,"id":40,"is_public":false,"name":"Mns
+        Tennis","start_at":"2015-06-01T14:12:00Z","end_at":"2015-06-19T06:00:00Z","public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"hide_final_grades":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_HB0EhYCpxVJaffeL6RP5Q9GyomuFxdlgXGYtVupD.ics"},"sis_course_id":"9950054","integration_id":null,"enrollments":[],"workflow_state":"available"}'
+    http_version: 
+  recorded_at: Wed, 08 Jul 2015 13:58:51 GMT
+recorded_with: VCR 2.9.3
