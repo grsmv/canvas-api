@@ -7,6 +7,7 @@ require 'canvas-api/enrollments'
 require 'canvas-api/modules'
 require 'canvas-api/items'
 require 'canvas-api/sections'
+require 'canvas-api/study_plan'
 
 class Object
   def to_struct

@@ -27,4 +27,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'webmock',   '1.20.4'
 
   s.add_runtime_dependency 'httparty', '0.13.5'
+  s.add_runtime_dependency 'parallel', '1.6.0'
 end
