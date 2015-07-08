@@ -8,6 +8,9 @@ require 'canvas-api/modules'
 require 'canvas-api/items'
 require 'canvas-api/sections'
 require 'canvas-api/study_plan'
+require 'canvas-api/quiz'
+require 'canvas-api/assignment'
+require 'canvas-api/discussion'
 
 class Object
   def to_struct
@@ -24,7 +27,10 @@ module Canvas
     enrollments: '/api/v1/courses/%{course_id}/enrollments',
     modules:     '/api/v1/courses/%{course_id}/modules',
     items:       '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
-    sections:    '/api/v1/courses/%{course_id}/sections'
+    sections:    '/api/v1/courses/%{course_id}/sections',
+    quiz:        '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
+    assignment:  '/api/v1/courses/%{course_id}/assignments/%{content_id}',
+    discussion:  '/api/v1/courses/%{course_id}/discussion_topics/%{content_id}'
   }
 
   class API

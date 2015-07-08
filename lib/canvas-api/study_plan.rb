@@ -1,3 +1,5 @@
+require 'parallel'
+
 module Canvas
   class API
     def study_plan(course_id:)
