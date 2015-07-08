@@ -2,3 +2,7 @@ lanuage: ruby
 rvm:
   - 2.2.0
   - 2.2.2
+
+addons:
+  code_climate:
+    repo_token: f0aed99da77aee3f4b08efe8a70c731e7652fd0e4eeed11a61f4ffafe4a8e9b6
