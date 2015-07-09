@@ -1,16 +1,17 @@
+require 'addressable/uri'
 require 'httparty'
 
-require 'canvas-api/version'
+require 'canvas-api/assignment'
 require 'canvas-api/courses'
 require 'canvas-api/course'
+require 'canvas-api/discussion'
 require 'canvas-api/enrollments'
 require 'canvas-api/modules'
 require 'canvas-api/items'
 require 'canvas-api/sections'
 require 'canvas-api/study_plan'
 require 'canvas-api/quiz'
-require 'canvas-api/assignment'
-require 'canvas-api/discussion'
+require 'canvas-api/version'
 
 class Object
   def to_struct
@@ -43,9 +44,11 @@ module Canvas
 
     private
 
-    def construct_endpoint(method_name, ids: {})
+    def construct_endpoint(method_name, ids: {}, params: {})
+      uri = Addressable::URI.new
+      uri.query_values = params.merge({access_token: options[:access_token]})
       resource = Canvas::Endpoints[method_name.to_sym] % ids
-      "#{@options[:host]}#{resource}?access_token=#{options[:access_token]}"
+      "#{@options[:host]}#{resource}?#{uri.query}"
     end
   end
 end

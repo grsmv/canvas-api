@@ -131,6 +131,19 @@ describe Canvas do
       it 'array element should be a struct with attributes accessible as methods' do
         expect(@enrollments[0].type).to eq 'StudentEnrollment'
       end
+
+      it 'should apply given query parameters' do
+        VCR.use_cassette 'enrollments_with_params' do
+          enrollments = @api.enrollments(course_id: 40, params: {type: 'StudentEnrollment'})
+          expect(enrollments.size).to eq 4
+          expect(enrollments[0].type).to eq 'StudentEnrollment'
+        end
+
+        VCR.use_cassette 'enrollments_with_params_nothing_found' do
+          enrollments = @api.enrollments(course_id: 40, params: {type: 'TeacherEnrollment'})
+          expect(enrollments.size).to eq 0
+        end
+      end
     end
 
   end

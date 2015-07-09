@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf&type=TeacherEnrollment
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 09 Jul 2015 12:03:40 GMT
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Link:
+      - <https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=10>;
+        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=10>;
+        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=10>;
+        rel="last"
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=%2BpYq9leiCEj04e7qPxhcDaGcj3cGKuOUX5XQj6O1DmmdpEGGLfA7Cbu5prtcSmlm5frJH1NTq%2FFspZm%2F1vlgXg%3D%3D;
+        path=/; secure
+      - canvas_session=5RYRGa5qef3xJOgZoz31bA.ojwBI7GFSkyhLmYnoSGEI5PGiqUGSJQxFmBh0kGBB26U682CDvaVTJR_aHNKgBdSAqlyXEzSE1xxCCM6rmEi4fuPBYEnUNI5ijb8x-QVfF76_xneSYp_XQz7_S9dCvgi.zEfI-bjomKhx738U0x_2LbayIo4.VZ5jHQ;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=enrollments_api;n=index;t=Course;i=40;b=981900;m=981900;u=0.13;y=0.02;d=0.05;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - e9368984-b03e-48c1-ad86-d27a159931c2
+      X-Request-Cost:
+      - '0.18420463299999545'
+      X-Request-Processor:
+      - a023d96
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.345987'
+      X-Session-Id:
+      - 25d54efe21ad133d15be0c632ad18ce2
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '22'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: "[]"
+    http_version: 
+  recorded_at: Thu, 09 Jul 2015 12:03:41 GMT
+recorded_with: VCR 2.9.3
