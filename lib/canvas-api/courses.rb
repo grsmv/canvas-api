@@ -1,8 +1,7 @@
 module Canvas
   class API
     def courses
-      endpoint = construct_endpoint __method__
-      HTTParty.get(endpoint).map &:to_struct
+      get_collection __method__
     end
   end
 end

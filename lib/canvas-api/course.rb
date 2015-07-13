@@ -1,8 +1,7 @@
 module Canvas
   class API
     def course(course_id:)
-      endpoint = construct_endpoint __method__, ids: { course_id: course_id }
-      HTTParty.get(endpoint).to_struct
+      get_single __method__, ids: { course_id: course_id }
     end
   end
 end

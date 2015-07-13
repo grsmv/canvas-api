@@ -1422,4 +1422,377 @@ http_interactions:
         2 for AHunyak","submission_types":["online_url"],"has_submitted_submissions":false,"muted":false,"html_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/9","has_overrides":true,"needs_grading_count":0,"integration_id":null,"integration_data":{},"published":false,"unpublishable":true,"locked_for_user":false,"submissions_download_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/9/submissions?zip=1"}'
     http_version: 
   recorded_at: Thu, 09 Jul 2015 12:03:50 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/11/items?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Jul 2015 15:05:31 GMT
+      Etag:
+      - '"2d2dfc5867fe44f5843c1509d3e833eb"'
+      Link:
+      - <https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/11/items?page=1&per_page=10>;
+        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/11/items?page=1&per_page=10>;
+        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/11/items?page=1&per_page=10>;
+        rel="last"
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=8CtGPdBO7qjXfz%2ByUzkPcoFGmLW1V0TyAxaqfmllPX%2BpeSBemXeFzoY7a4c5Y2Af8wjA8uVnNbV3QuFVKgNSOQ%3D%3D;
+        path=/; secure
+      - canvas_session=DfiGRsS32PXyH1rSWiuV1Q.UWupNxduQZpFkXlO_8vGvDGKPUl3Y4Yb6BEzc7G6GcNpkUM_MHtGB-Nlh_lhnzM3JmPydDj0zOkblsAe14HXQGcNrL2A4LpIRcHFOjYreIUUHeyrXieu5W7uVvintKZd.7pXTBB2ZXmPSizmrzZqm77Et1X8.VaPTuw;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=context_module_items_api;n=index;t=Course;i=40;b=918600;m=918600;u=0.25;y=0.01;d=0.15;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '676.673707940812'
+      X-Request-Context-Id:
+      - 0add575c-ede1-469e-b91e-0b837b14a706
+      X-Request-Cost:
+      - '0.401183388'
+      X-Request-Processor:
+      - a023c36
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.493424'
+      X-Session-Id:
+      - 11723c99ec8e3d6f8be41df123b1bd8a
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '201'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":47,"indent":0,"position":1,"title":"Test discussion","type":"Discussion","module_id":11,"html_url":"https://softservepartnership.test.instructure.com/courses/40/modules/items/47","content_id":36,"url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/discussion_topics/36","published":false}]'
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 15:05:31 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/10/items?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Jul 2015 15:05:31 GMT
+      Etag:
+      - '"d69c4a50d0d91bade80f726c8d3783c2"'
+      Link:
+      - <https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/10/items?page=1&per_page=10>;
+        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/10/items?page=1&per_page=10>;
+        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/10/items?page=1&per_page=10>;
+        rel="last"
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=dIJYRldNrZCa%2BJ0TmuRxenv8c%2B4mjMll4bX0fCUGvVAbsT0iHDnc1NmtxHv5zyAwAb0EuA21uwS5mr8ta2HVCg%3D%3D;
+        path=/; secure
+      - canvas_session=drAg-qBAo3NX96UKiRTpJQ.bWrlIU9ueB-0Jy7a9lCflvoCIOiywWBtiKQEOhqBSCWDy26QlqQJTYAF9_Y3N4bDaCIg4Qhz1ZxOMapOJFCNVlLGG4UiiYaNKXr4ybj1rHfLID8TjH_MxS0gCxA3faDj.lDdN8YDMoP3G3-E9sYg_6uASqz0.VaPTuw;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=context_module_items_api;n=index;t=Course;i=40;b=916440;m=916440;u=0.27;y=0.02;d=0.22;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '694.7461284810662'
+      X-Request-Context-Id:
+      - 4f5dd161-0dbc-42fb-855c-00b3e124bfc3
+      X-Request-Cost:
+      - '0.4868386360000386'
+      X-Request-Processor:
+      - a023d96
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.735157'
+      X-Session-Id:
+      - 28b0f118716599f13bae5e33d2121191
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '356'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":43,"indent":1,"position":1,"title":"Module 2 Page 1","type":"Page","module_id":10,"html_url":"https://softservepartnership.test.instructure.com/courses/40/modules/items/43","page_url":"module-2-page-1","url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/pages/module-2-page-1","published":true},{"id":44,"indent":1,"position":2,"title":"image-2.jpg","type":"File","module_id":10,"html_url":"https://softservepartnership.test.instructure.com/courses/40/modules/items/44","content_id":146,"url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/files/146","published":true},{"id":45,"indent":1,"position":3,"title":"Module
+        2 URL 1","type":"ExternalUrl","module_id":10,"html_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/module_item_redirect/45","external_url":"https://prsvip.com","new_tab":true,"published":true},{"id":46,"indent":2,"position":4,"title":"example","type":"Quiz","module_id":10,"html_url":"https://softservepartnership.test.instructure.com/courses/40/modules/items/46","content_id":38,"url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/quizzes/38","published":true}]'
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 15:05:32 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/assignments/10?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Jul 2015 15:05:31 GMT
+      Etag:
+      - '"91606d6fde7ead84d3b3e1b48d5b8878"'
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=nuibzYeuDtb%2FPqSemyOvcyQZD8DUarmzF4WDX3n2DCOvhd763cZnnM4M%2Fa7JV%2BNLb2o%2BteEIwNdUx9knDcFlSg%3D%3D;
+        path=/; secure
+      - canvas_session=Bmi-wONW26pdppIjK_O3AA.0EtFk5pwC0HWRn1NzMFJ3vcroT7-l1F1hBGL9SHC9fvYOxiYVBkssHJg2qQv-0t8JHApeojGjv3NMVj5fZlvWKT7LTMJnuKK7afz0j3Dud0lxdMepGCjJUXqAcmSAqFU.La9JM_SrRwOzHQhZthJVNKDBEAI.VaPTvA;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=assignments_api;n=show;t=Course;i=40;b=913348;m=913348;u=0.42;y=0.02;d=0.34;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 3a095c9f-34f5-4eaa-97e1-596edd139778
+      X-Request-Cost:
+      - '0.7573351250000018'
+      X-Request-Processor:
+      - a023d96
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '1.114124'
+      X-Session-Id:
+      - ad8be031f3af40f66f4ad13b7ba98c8b
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '461'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"anonymous_peer_reviews":false,"assignment_group_id":20,"automatic_peer_reviews":false,"created_at":"2015-06-18T10:49:34Z","description":"","due_at":null,"grade_group_students_individually":false,"grading_standard_id":null,"grading_type":"percent","group_category_id":null,"id":10,"lock_at":null,"peer_reviews":false,"points_possible":100,"position":1,"post_to_sis":null,"unlock_at":null,"updated_at":"2015-06-23T14:27:39Z","course_id":40,"name":"Assignment
+        3 for AHunyak","submission_types":["online_url"],"has_submitted_submissions":false,"muted":false,"html_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/10","has_overrides":true,"needs_grading_count":0,"integration_id":null,"integration_data":{},"published":true,"unpublishable":true,"locked_for_user":false,"submissions_download_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/10/submissions?zip=1"}'
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 15:05:32 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/quizzes/38?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Jul 2015 21:25:51 GMT
+      Etag:
+      - '"64e2c736ed37ad9ef624db0ee979eb89"'
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=92YhSLLS1QPD09ywsB7SkU71rvzzlUmCcEWW2YI5j1XFCU9x6oqPVLq%2Fif71MYbaJrDjm7vUMc0zD9%2BW0w7NBw%3D%3D;
+        path=/; secure
+      - canvas_session=iAuq_-p74pGhaLePHhtS6A.DPduSjwLAu3aTeiPtO5bTzJAOAKMykOsky8qVUUNh3ZLmlZ73gJCznHknVHNXckzNyuy_HpCv_bpl3IG3Ozb9zBouHC-Nyia-S4gMwyXPNbv0eEA6PtZbIU0pD5EX1cZ.9n6c6pDLfg-zT33ENEneclhp-I8.VaQs4A;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=quizzes/quizzes_api;n=show;t=Course;i=40;b=1115208;m=1115208;u=0.45;y=0.03;d=0.20;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '696.2055617626783'
+      X-Request-Context-Id:
+      - d0aef8c4-17fc-4cce-88ff-ce0bab8ff018
+      X-Request-Cost:
+      - '0.6483501140000456'
+      X-Request-Processor:
+      - a023c36
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.888992'
+      X-Session-Id:
+      - fd8a131fabe0867d519e7a03c3358982
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '707'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":38,"title":"example","html_url":"https://softservepartnership.test.instructure.com/courses/40/quizzes/38","mobile_url":"https://softservepartnership.test.instructure.com/courses/40/quizzes/38?force_user=1\u0026persist_headless=1","description":null,"quiz_type":"assignment","time_limit":null,"shuffle_answers":false,"show_correct_answers":true,"scoring_policy":"keep_highest","allowed_attempts":1,"one_question_at_a_time":false,"question_count":0,"points_possible":0,"cant_go_back":false,"access_code":null,"ip_filter":null,"due_at":"2015-07-09T05:59:59Z","lock_at":null,"unlock_at":null,"published":true,"unpublishable":false,"locked_for_user":false,"hide_results":null,"show_correct_answers_at":null,"hide_correct_answers_at":null,"all_dates":[{"due_at":"2015-07-09T05:59:59Z","unlock_at":null,"lock_at":null,"base":true}],"can_unpublish":false,"can_update":true,"require_lockdown_browser":null,"require_lockdown_browser_for_results":null,"require_lockdown_browser_monitor":null,"lockdown_browser_monitor_data":null,"speed_grader_url":"https://softservepartnership.test.instructure.com/courses/40/gradebook/speed_grader?assignment_id=48","permissions":{"read_statistics":true,"manage":true,"read":true,"update":true,"delete":true,"create":true,"submit":true,"grade":true,"review_grades":true,"view_answer_audits":true},"quiz_reports_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/quizzes/38/reports","quiz_statistics_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/quizzes/38/statistics","message_students_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/quizzes/38/submission_users/message","section_count":3,"quiz_submission_versions_html_url":"https://softservepartnership.test.instructure.com/courses/40/quizzes/38/submission_versions","assignment_id":48,"one_time_results":null,"assignment_group_id":16,"show_correct_answers_last_attempt":false,"version_number":5,"question_types":[],"has_access_code":false}'
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 21:25:52 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/assignments/9?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 13 Jul 2015 21:25:51 GMT
+      Etag:
+      - '"b33143c00156a9299c056c7d6ce258c5"'
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=%2BORQ2oQYLH29Fa6CfHK297oOgcuGgStUhTwAFOpPG%2BGh1GmAxUIHKI9DhbUKB9qe9l%2B0m%2BXOeQ7cUyte2jopkQ%3D%3D;
+        path=/; secure
+      - canvas_session=7rPUHKJfjqhtJBmTIrS7Wg.NCeSK-WOcgge3u9VUiyMPgepLAIjqgS7xDPIqiKLSOqGgzyyTcaVXvJigEPn-2yXOUO72EL91qVRBkIbtqv8CsreJIwEZPyQCX_FA13EOLgMwKdx2DMK_3vdA-pYZmlK.mmp9MIJn8Zw_yzFYB-WkVGsO3jU.VaQs4Q;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=assignments_api;n=show;t=Course;i=40;b=981976;m=981976;u=0.51;y=0.04;d=0.39;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 20cad99d-24fc-47ff-9912-f4b6e7ca6108
+      X-Request-Cost:
+      - '0.896251455999991'
+      X-Request-Processor:
+      - a023d96
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '1.448558'
+      X-Session-Id:
+      - fb3a04d7b21324d922e08b6528224731
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '475'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"anonymous_peer_reviews":false,"assignment_group_id":18,"automatic_peer_reviews":false,"created_at":"2015-06-18T10:13:01Z","description":"","due_at":null,"grade_group_students_individually":false,"grading_standard_id":null,"grading_type":"percent","group_category_id":null,"id":9,"lock_at":"2015-06-20T05:59:00Z","peer_reviews":false,"points_possible":100,"position":2,"post_to_sis":null,"unlock_at":"2015-06-18T06:00:00Z","updated_at":"2015-06-23T11:07:18Z","course_id":40,"name":"Assignment
+        2 for AHunyak","submission_types":["online_url"],"has_submitted_submissions":false,"muted":false,"html_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/9","has_overrides":true,"needs_grading_count":0,"integration_id":null,"integration_data":{},"published":false,"unpublishable":true,"locked_for_user":false,"submissions_download_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/9/submissions?zip=1"}'
+    http_version: 
+  recorded_at: Mon, 13 Jul 2015 21:25:53 GMT
 recorded_with: VCR 2.9.3

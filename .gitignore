@@ -1,3 +1,5 @@
 .idea
+.yardoc
 Gemfile.lock
 coverage
+doc
