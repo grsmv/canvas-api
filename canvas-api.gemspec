@@ -23,8 +23,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop',   '0.29.1'
   s.add_development_dependency 'simplecov', '0.9.2'
   s.add_development_dependency 'fuubar',    '2.0.0'
-  s.add_development_dependency 'vcr',       '2.9.3'
-  s.add_development_dependency 'webmock',   '1.20.4'
 
   s.add_runtime_dependency 'httparty',    '0.13.5'
   s.add_runtime_dependency 'parallel',    '1.6.0'

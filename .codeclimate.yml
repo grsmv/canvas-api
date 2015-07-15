@@ -1,0 +1,6 @@
+ratings:
+  paths:
+  - lib/**
+
+exclude_path:
+- spec/**
