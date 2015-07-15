@@ -1,6 +1,10 @@
+languages:
+  Ruby: true
+
 ratings:
   paths:
-  - lib/**
+  - lib/*.rb
+  - lib/canvas-api/*.rb
 
-exclude_path:
+exclude_paths:
 - spec/**
