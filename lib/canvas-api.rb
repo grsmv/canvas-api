@@ -4,6 +4,7 @@ require 'vcr'
 require 'base64'
 
 require_relative './canvas-api/assignment'
+require_relative './canvas-api/assignment_override'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
 require_relative './canvas-api/discussion'
@@ -13,6 +14,7 @@ require_relative './canvas-api/items'
 require_relative './canvas-api/sections'
 require_relative './canvas-api/study_plan'
 require_relative './canvas-api/quiz'
+require_relative './canvas-api/quiz_assignment_override'
 require_relative './canvas-api/version'
 
 class Object
@@ -24,17 +26,18 @@ end
 
 module Canvas
 
-  # List of endpoint templates for final resource URI generation
   Endpoints = {
-    courses:     '/api/v1/courses',
-    course:      '/api/v1/courses/%{course_id}',
-    enrollments: '/api/v1/courses/%{course_id}/enrollments',
-    modules:     '/api/v1/courses/%{course_id}/modules',
-    items:       '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
-    sections:    '/api/v1/courses/%{course_id}/sections',
-    quiz:        '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
-    assignment:  '/api/v1/courses/%{course_id}/assignments/%{content_id}',
-    discussion:  '/api/v1/courses/%{course_id}/discussion_topics/%{content_id}'
+    courses:                  '/api/v1/courses',
+    course:                   '/api/v1/courses/%{course_id}',
+    enrollments:              '/api/v1/courses/%{course_id}/enrollments',
+    modules:                  '/api/v1/courses/%{course_id}/modules',
+    items:                    '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
+    sections:                 '/api/v1/courses/%{course_id}/sections',
+    quiz:                     '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
+    quiz_assignment_override: '/api/v1/courses/%{course_id}/quizzes/assignment_overrides',
+    assignment:               '/api/v1/courses/%{course_id}/assignments/%{content_id}',
+    assignment_override:      '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
+    discussion:               '/api/v1/courses/%{course_id}/discussion_topics/%{content_id}'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
@@ -119,3 +122,15 @@ module Canvas
     end
   end
 end
+
+# -------------------------------------
+require 'awesome_print'
+require 'json'
+
+c = Canvas::API.new host:'https://softservepartnership.test.instructure.com',
+                    access_token: '4240~M7cZaEZCAVrlkBUgyHsNg147HPSdNTibwlNr5WTB3a4C65HYluqBEAmDajfZHcHo'
+
+# ap c.study_plan course_id: 40
+ap c.assignment course_id: 40, content_id: 7
+ap c.assignment_override course_id: 40, assignment_id: 7
+# ap c.quiz_assignment_override course_id: 40
