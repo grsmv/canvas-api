@@ -66,8 +66,8 @@ module Canvas
     # == Returns:
     #   An API object, configured for further requests
     #
-    def initialize(host:, access_token:, cache: false)
-      @options = { host: host, access_token: access_token, cache: cache}
+    def initialize(host:, access_token:, cache: false, verbose: false)
+      @options = { host: host, access_token: access_token, cache: cache, verbose: verbose}
 
       if @options[:cache]
         VCR.configure do |config|
@@ -104,13 +104,18 @@ module Canvas
 
     def get(method_name, ids: {}, params: {}, result_formatting: ->{})
       endpoint = construct_endpoint(method_name, ids: ids, params: params)
-      if @options[:cache]
-        VCR.use_cassette(Base64.strict_encode64 endpoint) {
-          result_formatting.call HTTParty.get(endpoint)
-        }
-      else
-        result_formatting.call HTTParty.get(endpoint)
+      puts 'GET ' + endpoint if @options[:verbose]
+
+      fetching_data = lambda do
+        content = HTTParty.get(endpoint)
+        if content['error_report_id'].nil?
+          result_formatting.call content
+        end
       end
+
+      @options[:cache] ?
+        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data) :
+        fetching_data.call
     end
 
     def get_single(method_name, ids: {}, params: {})
@@ -122,15 +127,3 @@ module Canvas
     end
   end
 end
-
-# -------------------------------------
-require 'awesome_print'
-require 'json'
-
-c = Canvas::API.new host:'https://softservepartnership.test.instructure.com',
-                    access_token: '4240~M7cZaEZCAVrlkBUgyHsNg147HPSdNTibwlNr5WTB3a4C65HYluqBEAmDajfZHcHo'
-
-# ap c.study_plan course_id: 40
-ap c.assignment course_id: 40, content_id: 7
-ap c.assignment_override course_id: 40, assignment_id: 7
-# ap c.quiz_assignment_override course_id: 40
