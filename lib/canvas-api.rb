@@ -108,8 +108,10 @@ module Canvas
 
       fetching_data = lambda do
         content = HTTParty.get(endpoint)
-        unless content.class == Hash && content['error_report_id'].nil?
+        begin
           result_formatting.call content
+        rescue
+          nil
         end
       end
 
