@@ -4,6 +4,7 @@ require 'vcr'
 require 'base64'
 
 require_relative './canvas-api/assignment'
+require_relative './canvas-api/assignment_override'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
 require_relative './canvas-api/discussion'
@@ -13,6 +14,7 @@ require_relative './canvas-api/items'
 require_relative './canvas-api/sections'
 require_relative './canvas-api/study_plan'
 require_relative './canvas-api/quiz'
+require_relative './canvas-api/quiz_assignment_override'
 require_relative './canvas-api/version'
 
 class Object
@@ -24,17 +26,18 @@ end
 
 module Canvas
 
-  # List of endpoint templates for final resource URI generation
   Endpoints = {
-    courses:     '/api/v1/courses',
-    course:      '/api/v1/courses/%{course_id}',
-    enrollments: '/api/v1/courses/%{course_id}/enrollments',
-    modules:     '/api/v1/courses/%{course_id}/modules',
-    items:       '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
-    sections:    '/api/v1/courses/%{course_id}/sections',
-    quiz:        '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
-    assignment:  '/api/v1/courses/%{course_id}/assignments/%{content_id}',
-    discussion:  '/api/v1/courses/%{course_id}/discussion_topics/%{content_id}'
+    courses:                  '/api/v1/courses',
+    course:                   '/api/v1/courses/%{course_id}',
+    enrollments:              '/api/v1/courses/%{course_id}/enrollments',
+    modules:                  '/api/v1/courses/%{course_id}/modules',
+    items:                    '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
+    sections:                 '/api/v1/courses/%{course_id}/sections',
+    quiz:                     '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
+    quiz_assignment_override: '/api/v1/courses/%{course_id}/quizzes/assignment_overrides',
+    assignment:               '/api/v1/courses/%{course_id}/assignments/%{content_id}',
+    assignment_override:      '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
+    discussion:               '/api/v1/courses/%{course_id}/discussion_topics/%{content_id}'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
@@ -63,8 +66,8 @@ module Canvas
     # == Returns:
     #   An API object, configured for further requests
     #
-    def initialize(host:, access_token:, cache: false)
-      @options = { host: host, access_token: access_token, cache: cache}
+    def initialize(host:, access_token:, cache: false, verbose: false)
+      @options = { host: host, access_token: access_token, cache: cache, verbose: verbose}
 
       if @options[:cache]
         VCR.configure do |config|
@@ -101,12 +104,21 @@ module Canvas
 
     def get(method_name, ids: {}, params: {}, result_formatting: ->{})
       endpoint = construct_endpoint(method_name, ids: ids, params: params)
+      puts 'GET ' + endpoint if @options[:verbose]
+
+      fetching_data = lambda do
+        content = HTTParty.get(endpoint)
+        begin
+          result_formatting.call content
+        rescue
+          nil
+        end
+      end
+
       if @options[:cache]
-        VCR.use_cassette(Base64.strict_encode64 endpoint) {
-          result_formatting.call HTTParty.get(endpoint)
-        }
+        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data)
       else
-        result_formatting.call HTTParty.get(endpoint)
+        fetching_data.call
       end
     end
 

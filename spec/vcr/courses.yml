@@ -23,9 +23,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 08 Jul 2015 13:56:52 GMT
+      - Thu, 16 Jul 2015 22:37:27 GMT
       Etag:
-      - '"4eb4e57688e501ac1c025f7450a08428"'
+      - '"e16e23bda0d1307b82666ef7a4dca109"'
       Link:
       - <https://softservepartnership.test.instructure.com/api/v1/courses?page=1&per_page=10>;
         rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses?page=1&per_page=10>;
@@ -36,16 +36,16 @@ http_interactions:
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=hj5GBatTAtNlspkKfelJaMbQSyldZwu9HOt9uk%2BWIXTvagNW7xZG6hHL82tK0DhYv5F6Xx4Ab8pIvR%2FeftBlRg%3D%3D;
+      - _csrf_token=fSzN6Txp8GNCAXlJdEwC81Irtt8IpuWxjY725f0z2JxLWYS8eF3JJC9SFSMcClOEPEbYkzvrpNC1xK%2Bxr1Setw%3D%3D;
         path=/; secure
-      - canvas_session=joKMhlZ1X2LfEjkmInPboQ.Kciv_O3H0jFWxKXjzF8TJKa-Iw658zcRhs3Z55NOj0gZZ4_a0O-VCPnjczmRaNQuVS20ZnVoddFixkocySScqy7B-Rf9XGy0ZbKvVhJDQtdE5XwCEsSRKRWqce6yGskD.hJqidhJA8ziAIbFn5SzA1Bpggtg.VZ0sJA;
+      - canvas_session=DaEa1sD8p1_HxmjzxBoPoQ.IJ8SkHb5QYJA_YViIPTdAsAFjHscIAurpEPxqZHOTHJ-mFn82PptYz6i40hiTiZzYCZSuJeLcUGCuu4_9yfERGrdECGaIN9jBxcshcuwHXJVIWQNHjj94fmaQtah2D_8.GQupKuo0jd4-_9CM8DFMJQ-xMJY.VagyJw;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=courses;n=index;b=981900;m=981900;u=0.10;y=0.01;d=0.03;
+      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=courses;n=index;b=916508;m=916508;u=0.20;y=0.04;d=0.14;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -55,26 +55,27 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 849ca79d-0a6a-4249-87e3-9555b64bed7e
+      - 495e272d-e4c3-49b1-9b5e-8300651ca582
       X-Request-Cost:
-      - '0.13417064699999431'
+      - '0.34295584900004544'
       X-Request-Processor:
       - a023d96
       X-Robots-Tag:
       - none
       X-Runtime:
-      - '0.279147'
+      - '0.619360'
       X-Session-Id:
-      - 36d2de7acb017c515e197ce0d4534cc1
+      - b8dc1b7100b971b5f9f7d9694cf12fdf
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '384'
+      - '536'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"account_id":41,"course_code":"test","default_view":"feed","enrollment_term_id":1,"id":9962,"is_public":false,"name":"test","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_aFNrG2yf2WGS8S8YyI3AzHEUNaP5Y5cE6GRvaxEj.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"}]'
+      string: '[{"account_id":39,"course_code":"9950054","default_view":"feed","enrollment_term_id":1,"id":40,"is_public":false,"name":"Mns
+        Tennis","start_at":"2015-06-01T14:12:00Z","end_at":"2015-06-19T06:00:00Z","public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_HB0EhYCpxVJaffeL6RP5Q9GyomuFxdlgXGYtVupD.ics"},"sis_course_id":"9950054","integration_id":null,"enrollments":[{"type":"student","role":"StudentEnrollment","role_id":3,"enrollment_state":"invited"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"test","default_view":"feed","enrollment_term_id":1,"id":9962,"is_public":false,"name":"test","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_aFNrG2yf2WGS8S8YyI3AzHEUNaP5Y5cE6GRvaxEj.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"}]'
     http_version: 
-  recorded_at: Wed, 08 Jul 2015 13:56:52 GMT
+  recorded_at: Thu, 16 Jul 2015 22:37:28 GMT
 recorded_with: VCR 2.9.3
