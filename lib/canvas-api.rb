@@ -7,14 +7,12 @@ require_relative './canvas-api/assignment'
 require_relative './canvas-api/assignment_override'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
-require_relative './canvas-api/discussion'
 require_relative './canvas-api/enrollments'
 require_relative './canvas-api/modules'
 require_relative './canvas-api/items'
 require_relative './canvas-api/sections'
 require_relative './canvas-api/study_plan'
 require_relative './canvas-api/quiz'
-require_relative './canvas-api/quiz_assignment_override'
 require_relative './canvas-api/version'
 
 class Object
@@ -34,10 +32,8 @@ module Canvas
     items:                    '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
     sections:                 '/api/v1/courses/%{course_id}/sections',
     quiz:                     '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
-    quiz_assignment_override: '/api/v1/courses/%{course_id}/quizzes/assignment_overrides',
     assignment:               '/api/v1/courses/%{course_id}/assignments/%{content_id}',
-    assignment_override:      '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
-    discussion:               '/api/v1/courses/%{course_id}/discussion_topics/%{content_id}'
+    assignment_override:      '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
@@ -115,11 +111,9 @@ module Canvas
         end
       end
 
-      if @options[:cache]
-        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data)
-      else
+      @options[:cache] ?
+        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data) :
         fetching_data.call
-      end
     end
 
     def get_single(method_name, ids: {}, params: {})
