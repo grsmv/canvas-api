@@ -108,14 +108,16 @@ module Canvas
 
       fetching_data = lambda do
         content = HTTParty.get(endpoint)
-        if content['error_report_id'].nil?
+        unless content.class == Hash && content['error_report_id'].nil?
           result_formatting.call content
         end
       end
 
-      @options[:cache] ?
-        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data) :
+      if @options[:cache]
+        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data)
+      else
         fetching_data.call
+      end
     end
 
     def get_single(method_name, ids: {}, params: {})
