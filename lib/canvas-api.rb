@@ -76,6 +76,59 @@ module Canvas
       end
     end
 
+
+    # Local wrapper for HTTParty gem. Hides response handling and formatting under the hood
+    #
+    # == Parameters:
+    # http_verb::
+    #   Symbol with one of the standard HTTP verb
+    # method_name::
+    #   Symbol with API resource name (by which search in Endpoint will be performed)
+    # ids::
+    #   Hash with collection of URI template variables (with be processed during endpoint URI construction)
+    # params::
+    #   Hash with additional request params. Will be processed in 'k=v&a=c' form during endpoint creation.
+    # body::
+    #   Hash with possible request body (make sense in create-update requests)
+    # result_formatting::
+    #   Proc with response formatting instructions
+    #
+    # == Returns:
+    #   raw Hash
+    #
+    def request(http_verb, method_name, ids: {}, params: {}, body: {}, result_formatting: ->{})
+
+      endpoint = construct_endpoint(method_name, ids: ids, params: params)
+      puts "#{http_verb.upcase}" + endpoint if @options[:verbose]
+
+      fetching_data = lambda do
+        content = HTTParty.send(http_verb.to_sym, endpoint, query: body)
+        begin
+          result_formatting.call content
+        rescue
+          nil
+        end
+      end
+
+      if @options[:cache]
+        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data)
+      else
+        fetching_data.call
+      end
+    end
+
+
+    # Creating corresponding helpers for performing requests during class initialisation
+    %i(get post put).each do |http_verb|
+      define_method("#{http_verb}_single") do |method_name, ids: {}, params: {}, body: {}|
+        request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(s) { s.to_struct })
+      end
+
+      define_method("#{http_verb}_collection") do |method_name, ids: {}, params: {}, body: {}|
+        request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
+      end
+    end
+
     private
 
     # Compiling resource's endpoint, using endpoint template, Hash of resourde IDs
@@ -95,40 +148,9 @@ module Canvas
     #
     def construct_endpoint(method_name, ids: {}, params: {})
       uri = Addressable::URI.new
-      uri.query_values = params.merge({access_token: options[:access_token]})
+      uri.query_values = params.merge(access_token: options[:access_token])
       resource = Canvas::Endpoints[method_name.to_sym] % ids
       "#{@options[:host]}#{resource}?#{uri.query}"
     end
-
-    def get(method_name, ids: {}, params: {}, result_formatting: ->{})
-      endpoint = construct_endpoint(method_name, ids: ids, params: params)
-      puts 'GET ' + endpoint if @options[:verbose]
-
-      fetching_data = lambda do
-        content = HTTParty.get(endpoint)
-        begin
-          result_formatting.call content
-        rescue
-          nil
-        end
-      end
-
-      @options[:cache] ?
-        VCR.use_cassette(Base64.strict_encode64(endpoint), &fetching_data) :
-        fetching_data.call
-    end
-
-    def get_single(method_name, ids: {}, params: {})
-      get(method_name, ids: ids, params: params, result_formatting: ->(single){ single.to_struct })
-    end
-
-    def get_collection(method_name, ids: {}, params: {})
-      get(method_name, ids: ids, params: params, result_formatting: ->(collection){ collection.map &:to_struct})
-    end
   end
 end
-
-require 'awesome_print'
-c = Canvas::API.new host: 'https://softservepartnership.instructure.com',
-                    access_token: '4240~6kNjsoobi55fpHYhH0UkooPojq6rSulhhG83zJ6wbUXoC4P9O4MFgc2LGQ2OT7JA'
-ap c.assignment_override course_id: 40, assignment_id: 7

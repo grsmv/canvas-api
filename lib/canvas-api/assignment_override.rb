@@ -4,16 +4,20 @@ module Canvas
       get_collection __method__, ids: { course_id: course_id, assignment_id: assignment_id }
     end
 
-=begin
-    assignment_override = {
-      student_ids: [],
-      title: "Some Name", # student's name
-      course_section_id: Int, # course section ID (if any)
-      due_at: Date
-    }
-=end
-    def create_assignment_override(course_id:, assignment_id:)
-
+    # Usage:
+    #   ap c.create_assignment_override(course_id: 40,
+    #                                   assignment_id: 7,
+    #                                   body: {
+    #                                       assignment_override: {
+    #                                           title: 'Maryna Kupriyanchuk',
+    #                                           student_ids: [3336],
+    #                                           course_section_id: 935,
+    #                                           lock_at: Time.now.utc.iso8601,
+    #                                           unlock_at: Time.now.utc.iso8601,
+    #                                           due_at: nil
+    #                                       }})
+    def create_assignment_override(course_id:, assignment_id:, body: {})
+      post_single __method__, ids: {course_id: course_id, assignment_id: assignment_id }, body: body
     end
   end
 end
