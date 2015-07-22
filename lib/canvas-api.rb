@@ -25,15 +25,17 @@ end
 module Canvas
 
   Endpoints = {
-    courses:                  '/api/v1/courses',
-    course:                   '/api/v1/courses/%{course_id}',
-    enrollments:              '/api/v1/courses/%{course_id}/enrollments',
-    modules:                  '/api/v1/courses/%{course_id}/modules',
-    items:                    '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
-    sections:                 '/api/v1/courses/%{course_id}/sections',
-    quiz:                     '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
-    assignment:               '/api/v1/courses/%{course_id}/assignments/%{content_id}',
-    assignment_override:      '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides'
+    courses:                    '/api/v1/courses',
+    course:                     '/api/v1/courses/%{course_id}',
+    enrollments:                '/api/v1/courses/%{course_id}/enrollments',
+    modules:                    '/api/v1/courses/%{course_id}/modules',
+    items:                      '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
+    sections:                   '/api/v1/courses/%{course_id}/sections',
+    quiz:                       '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
+    assignment:                 '/api/v1/courses/%{course_id}/assignments/%{content_id}',
+    assignment_override:        '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
+    create_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
+    update_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
@@ -125,3 +127,8 @@ module Canvas
     end
   end
 end
+
+require 'awesome_print'
+c = Canvas::API.new host: 'https://softservepartnership.instructure.com',
+                    access_token: '4240~6kNjsoobi55fpHYhH0UkooPojq6rSulhhG83zJ6wbUXoC4P9O4MFgc2LGQ2OT7JA'
+ap c.assignment_override course_id: 40, assignment_id: 7
