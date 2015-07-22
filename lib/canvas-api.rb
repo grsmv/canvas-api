@@ -96,7 +96,7 @@ module Canvas
     # == Returns:
     #   raw Hash
     #
-    def request(http_verb, method_name, ids: {}, params: {}, body: {}, result_formatting: ->{})
+    def perform_request(http_verb, method_name, ids: {}, params: {}, body: {}, result_formatting: ->{})
 
       endpoint = construct_endpoint(method_name, ids: ids, params: params)
       puts "#{http_verb.upcase}" + endpoint if @options[:verbose]
@@ -121,11 +121,11 @@ module Canvas
     # Creating corresponding helpers for performing requests during class initialisation
     %i(get post put).each do |http_verb|
       define_method("#{http_verb}_single") do |method_name, ids: {}, params: {}, body: {}|
-        request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(s) { s.to_struct })
+        self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(s) { s.to_struct })
       end
 
       define_method("#{http_verb}_collection") do |method_name, ids: {}, params: {}, body: {}|
-        request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
+        self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
       end
     end
 
