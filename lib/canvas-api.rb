@@ -35,7 +35,8 @@ module Canvas
     assignment:                 '/api/v1/courses/%{course_id}/assignments/%{content_id}',
     assignment_override:        '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
     create_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
-    update_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}'
+    update_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}',
+    delete_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
@@ -119,7 +120,7 @@ module Canvas
 
 
     # Creating corresponding helpers for performing requests during class initialisation
-    %i(get post put).each do |http_verb|
+    %i(get post put delete).each do |http_verb|
       define_method("#{http_verb}_single") do |method_name, ids: {}, params: {}, body: {}|
         self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(s) { s.to_struct })
       end
