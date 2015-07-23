@@ -4,7 +4,7 @@ require 'vcr'
 require 'base64'
 
 require_relative './canvas-api/assignment'
-require_relative './canvas-api/assignment_override'
+require_relative './canvas-api/assignment_overrides'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
 require_relative './canvas-api/enrollments'
@@ -33,7 +33,7 @@ module Canvas
     sections:                   '/api/v1/courses/%{course_id}/sections',
     quiz:                       '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
     assignment:                 '/api/v1/courses/%{course_id}/assignments/%{content_id}',
-    assignment_override:        '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
+    assignment_overrides:       '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
     create_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
     update_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}',
     delete_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}'

@@ -41,8 +41,8 @@ module Canvas
                                            content_id: item.content_id)
             item.due_dates = [{student_id: 0, due_at: assignment_details.due_at}]
 
-            overrides = self.assignment_override(course_id: course_id,
-                                                 assignment_id: item.content_id)
+            overrides = self.assignment_overrides(course_id: course_id,
+                                                  assignment_id: item.content_id)
             unless overrides.nil?
               item.due_dates += expand_due_dates_for_students(overrides)
             end
@@ -60,7 +60,8 @@ module Canvas
         due_date[:student_ids].map do |student_id|
           {
             student_id: student_id,
-            due_at: due_date[:due_at]
+            due_at: due_date[:due_at],
+            override_id: due_date[:id]
           }
         end
       end.flatten
