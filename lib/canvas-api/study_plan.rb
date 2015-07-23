@@ -57,12 +57,14 @@ module Canvas
 
     def expand_due_dates_for_students(due_dates)
       due_dates.map do |due_date|
-        due_date[:student_ids].map do |student_id|
-          {
-            student_id: student_id,
-            due_at: due_date[:due_at],
-            override_id: due_date[:id]
-          }
+        if due_date.members.include? :student_ids
+          due_date.student_ids.map do |student_id|
+            {
+                student_id: student_id,
+                due_at: due_date[:due_at],
+                override_id: due_date[:id]
+            }
+          end
         end
       end.flatten
     end
