@@ -142,5 +142,17 @@ describe Canvas do
       end
     end
 
+    context 'submissions' do
+      before :each do
+        VCR.use_cassette 'submissions' do
+          @submissions = @api.submissions(section_id: 936, assignment_id: 7)
+        end
+      end
+      it 'should return array of submissions' do
+        expect(@submissions.class).to eq Array
+        expect(@submissions[0].workflow_state).to eq 'unsubmitted'
+      end
+    end
+
   end
 end
