@@ -14,6 +14,7 @@ require_relative './canvas-api/sections'
 require_relative './canvas-api/section_enrollments'
 require_relative './canvas-api/study_plan'
 require_relative './canvas-api/quiz'
+require_relative './canvas-api/submissions'
 require_relative './canvas-api/version'
 
 class Object
@@ -38,7 +39,8 @@ module Canvas
     assignment_overrides:       '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
     create_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
     update_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}',
-    delete_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}'
+    delete_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}',
+    submissions:                 '/api/v1/sections/%{section_id}/assignments/%{assignment_id}/submissions'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
