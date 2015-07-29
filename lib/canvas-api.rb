@@ -15,6 +15,7 @@ require_relative './canvas-api/section_enrollments'
 require_relative './canvas-api/study_plan'
 require_relative './canvas-api/quiz'
 require_relative './canvas-api/submissions'
+require_relative '.canvas-api/conversations'
 require_relative './canvas-api/version'
 
 class Object
