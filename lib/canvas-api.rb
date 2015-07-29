@@ -40,7 +40,8 @@ module Canvas
     create_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides',
     update_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}',
     delete_assignment_override: '/api/v1/courses/%{course_id}/assignments/%{assignment_id}/overrides/%{override_id}',
-    submissions:                 '/api/v1/sections/%{section_id}/assignments/%{assignment_id}/submissions'
+    submissions:                '/api/v1/sections/%{section_id}/assignments/%{assignment_id}/submissions',
+    create_conversations:       '/api/v1/conversations'
   }
 
   # Main class. All useful work we are doing here. Should be initialised using
