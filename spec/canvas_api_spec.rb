@@ -1,7 +1,9 @@
 require 'spec_helper'
 
+access_token1 = 'zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf'
+access_token2 = '4240~08TkpTBOhNE4SmyX4mKyXUVZGG76QyodFzc6AboUHRFwPYOdqKkkrM0rKcCyKUhY'
 credentials = {
-    access_token: 'zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf',
+    access_token: access_token1,
     host: 'https://softservepartnership.test.instructure.com'
 }
 
@@ -152,6 +154,26 @@ describe Canvas do
         expect(@submissions.class).to eq Array
         expect(@submissions[0].workflow_state).to eq 'unsubmitted'
       end
+    end
+
+    context '#conclude_enrollment' do
+      before :all do
+        credentials[:access_token] = access_token2
+      end
+      after :all do
+        credentials[:access_token] = access_token1
+      end
+
+      it 'returns the same enrollment' do
+        concluded_enrollment = nil
+        enrollment_id = 20211
+        VCR.use_cassette 'conclude_enrollment' do
+          concluded_enrollment = @api.conclude_enrollment(course_id: 40, enrollment_id: enrollment_id)
+        end
+        expect(concluded_enrollment.id).to eq enrollment_id
+        expect(concluded_enrollment.enrollment_state).to eq 'completed'
+      end
+
     end
 
   end

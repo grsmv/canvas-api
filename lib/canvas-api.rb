@@ -8,6 +8,7 @@ require_relative './canvas-api/assignment_overrides'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
 require_relative './canvas-api/enrollments'
+require_relative './canvas-api/conclude_enrollment'
 require_relative './canvas-api/modules'
 require_relative './canvas-api/items'
 require_relative './canvas-api/sections'
@@ -31,6 +32,7 @@ module Canvas
     courses:                    '/api/v1/courses',
     course:                     '/api/v1/courses/%{course_id}',
     enrollments:                '/api/v1/courses/%{course_id}/enrollments',
+    conclude_enrollment:        '/api/v1/courses/%{course_id}/enrollments/%{enrollment_id}',
     modules:                    '/api/v1/courses/%{course_id}/modules',
     items:                      '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
     sections:                   '/api/v1/courses/%{course_id}/sections',
@@ -134,6 +136,12 @@ module Canvas
       define_method("#{http_verb}_collection") do |method_name, ids: {}, params: {}, body: {}|
         self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
       end
+    end
+
+
+    # Check whether module item is an assignment or not
+    def self.assignment?(item)
+      %w(Assignment Quiz).include? item.type
     end
 
     private
