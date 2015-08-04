@@ -35,7 +35,7 @@ module Canvas
     def fill_due_dates(course_id, items)
       update_item = lambda do |item|
         item.tap do |item|
-          if %w(Assignment Quiz).include? item.type
+          if self.class.assignment?(item)
             assignment_details = self.send(item.type.downcase,
                                            course_id: course_id,
                                            content_id: item.content_id)
