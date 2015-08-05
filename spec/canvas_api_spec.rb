@@ -176,5 +176,33 @@ describe Canvas do
 
     end
 
+    context '#admins' do
+      before :all do
+        credentials[:access_token] = access_token2
+      end
+      after :all do
+        credentials[:access_token] = access_token1
+      end
+      let(:account_id) { 39 }
+
+      it 'returns an Array of admins' do
+        admins = nil
+        VCR.use_cassette 'admins' do
+          admins = @api.admins(account_id: account_id)
+        end
+        expect(admins).to be_an Array
+      end
+
+      it 'returns items with :id and :user attributes accessible as methods of a struct' do
+        admins = nil
+        VCR.use_cassette 'admins' do
+          admins = @api.admins(account_id: account_id)
+        end
+        expect(admins[0].id).to eq 6
+        expect(admins[0].user).to be_a Hash
+      end
+
+    end
+
   end
 end
