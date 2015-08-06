@@ -8,6 +8,7 @@ require_relative './canvas-api/assignment_overrides'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
 require_relative './canvas-api/enrollments'
+require_relative './canvas-api/enrollment'
 require_relative './canvas-api/conclude_enrollment'
 require_relative './canvas-api/modules'
 require_relative './canvas-api/items'
@@ -34,6 +35,7 @@ module Canvas
     courses:                    '/api/v1/courses',
     course:                     '/api/v1/courses/%{course_id}',
     enrollments:                '/api/v1/courses/%{course_id}/enrollments',
+    enrollment:                 '/api/v1/accounts/%{account_id}/enrollments/%{enrollment_id}',
     conclude_enrollment:        '/api/v1/courses/%{course_id}/enrollments/%{enrollment_id}',
     modules:                    '/api/v1/courses/%{course_id}/modules',
     items:                      '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
