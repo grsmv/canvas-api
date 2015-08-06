@@ -138,6 +138,7 @@ module Canvas
       end
 
       define_method("#{http_verb}_collection") do |method_name, ids: {}, params: {}, body: {}|
+        params[:per_page] = 10_000 if http_verb == :get and params[:per_page].nil?
         self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
       end
     end
