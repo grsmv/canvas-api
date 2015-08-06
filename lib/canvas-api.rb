@@ -13,6 +13,7 @@ require_relative './canvas-api/conclude_enrollment'
 require_relative './canvas-api/modules'
 require_relative './canvas-api/items'
 require_relative './canvas-api/sections'
+require_relative './canvas-api/section'
 require_relative './canvas-api/section_enrollments'
 require_relative './canvas-api/study_plan'
 require_relative './canvas-api/quiz'
@@ -40,6 +41,7 @@ module Canvas
     modules:                    '/api/v1/courses/%{course_id}/modules',
     items:                      '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
     sections:                   '/api/v1/courses/%{course_id}/sections',
+    section:                    '/api/v1/courses/%{course_id}/sections/%{section_id}',
     section_enrollments:        '/api/v1/sections/%{section_id}/enrollments',
     quiz:                       '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
     assignment:                 '/api/v1/courses/%{course_id}/assignments/%{content_id}',
