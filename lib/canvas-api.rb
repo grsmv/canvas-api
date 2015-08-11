@@ -5,6 +5,7 @@ require 'base64'
 
 require_relative './canvas-api/assignment'
 require_relative './canvas-api/assignment_overrides'
+require_relative './canvas-api/account'
 require_relative './canvas-api/courses'
 require_relative './canvas-api/course'
 require_relative './canvas-api/enrollments'
@@ -33,6 +34,7 @@ end
 module Canvas
 
   Endpoints = {
+    account:                    '/api/v1/accounts/%{account_id}',
     courses:                    '/api/v1/courses',
     course:                     '/api/v1/courses/%{course_id}',
     enrollments:                '/api/v1/courses/%{course_id}/enrollments',

@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/accounts/39?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 11 Aug 2015 12:40:34 GMT
+      Etag:
+      - '"1a601e787a71675e5f63839c977a136e"'
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=x46R9T1md06hMusvqOvTIleQNiXumbGKa%2BRDCvVG3ef1vdmscwAlAegB3Ufl3b1KOr8dUoj18PMjkCBHoBTutw%3D%3D;
+        path=/; secure
+      - canvas_session=_D2_f4pDDStKMRAv3VhFSQ.XCtTdy1rGHtfAizT-tc_i4_QRUphqdeJCoxHvcEX9gCX8LAalEfelg03kIvAbkA62Bmfa1CK1h5NluzXklASXGzMizp4oqs9syE_aRUDlW1ehcvmTBYD8O6TSZmv28AJ.lr7Uj8L4WcRZXLItPy5-CnI4NMk.VcntQg;
+        path=/; secure; HttpOnly
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Canvas-Meta:
+      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=accounts;n=show;t=Account;i=39;b=1046316;m=1046316;u=0.11;y=0.00;d=0.01;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 954c3bdd-44d4-4f2d-878f-f698f6a00e69
+      X-Request-Cost:
+      - '0.12155640700001365'
+      X-Request-Processor:
+      - a023c27
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.158605'
+      X-Session-Id:
+      - 10c7e6598eb10a9f08dc032a63229055
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '199'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":39,"name":"Aeries Continuation School","parent_account_id":1,"root_account_id":1,"workflow_state":"active","default_storage_quota_mb":500,"default_user_storage_quota_mb":50,"default_group_storage_quota_mb":50,"default_time_zone":"America/Denver","sis_account_id":"995","sis_import_id":61,"integration_id":null}'
+    http_version: 
+  recorded_at: Tue, 11 Aug 2015 12:40:08 GMT
+recorded_with: VCR 2.9.3

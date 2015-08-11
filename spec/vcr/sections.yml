@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/sections?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/sections?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000
     body:
       encoding: US-ASCII
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Jul 2015 22:37:32 GMT
+      - Tue, 11 Aug 2015 12:40:22 GMT
       Etag:
-      - '"34abe4996f86f988f07774e11ade3791"'
+      - '"af21314421c0cbbe09bf94a39899a528"'
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=SbDOPEUMdXgib4pqkB3XPgzK6VQYCTJ5be4uqd6DznF5wvZ4I04jLHsc4xrUfo5VfvPcPzNhWR89lkWanNaFQw%3D%3D;
+      - _csrf_token=kMfxU6%2B2rrNjID%2F7nEkhPOuq1x0j2P4ngpHXJ%2F0XUZvSjNoUxtfB4lpGds7SIRgKkuTkaVKun2PU%2Fr8SsVQDow%3D%3D;
         path=/; secure
-      - canvas_session=1sdB37psX5IukL844IOniQ.MaTf3vh8_VtQY_kClx6nc-XXjPQ9BvcvisFcYP0VeM7OegzoCTbh3v5UYT75BdKwGAnVaf2hg1lbst1tJ2HiIHIAAw5_K3-QpqdhBi7P7HyDZR-FM1WHfpcSjAzmyZQp.zW-ouce-JFXi1r4LbzdKqOf_P-M.VagyLA;
+      - canvas_session=C-j747cIFFRrM7smAG9BTQ.WufgSEQfcxDKQ7sRO5jXU_I1kYck3OJozxnAMPrKKepndoi7UPryPs4mVyF0VXm3tpW_O5pyXPqg-V1-Ixb7KHquCw_VZZFDAq-onmHeI3f3r2lU9Cs2FYJteHp2Usm7.ykC9wnNjSmOPP8HNfLxXeMAPw_Q.VcntNg;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=sections;n=index;t=Course;i=40;b=847932;m=847932;u=0.20;y=0.02;d=0.09;
+      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=sections;n=index;t=Course;i=40;b=980904;m=980904;u=0.23;y=0.01;d=0.05;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -50,27 +50,32 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 31400708-ae79-4628-9411-2187715824c5
+      - 1d847056-06c1-46cd-9fdc-64f64bc1057a
       X-Request-Cost:
-      - '0.28685252400001704'
+      - '0.2809027300000182'
       X-Request-Processor:
-      - a023d96
+      - a023c27
       X-Robots-Tag:
       - none
       X-Runtime:
-      - '0.511575'
+      - '0.407189'
       X-Session-Id:
-      - d04565b446a728834aee90cb13509ce4
+      - b008ea1da15216c1cd58952021f5a81a
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '201'
+      - '300'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"course_id":40,"end_at":"2015-06-19T06:00:00Z","id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":"2015-06-01T06:00:00Z","sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-06-25T06:00:00Z","id":936,"name":"9950054222","nonxlist_course_id":null,"start_at":"2015-06-22T06:00:00Z","sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":1371,"name":"Spring
-        2016","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null}]'
+      string: '[{"course_id":40,"end_at":null,"id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":936,"name":"9950054222","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":944,"name":"test
+        default","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":945,"name":"Test
+        Section 1","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-08-01T06:00:00Z","id":948,"name":"Sec3
+        Try to clone","nonxlist_course_id":null,"start_at":"2015-07-30T06:00:00Z","sis_section_id":"12345","sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-09-30T06:00:00Z","id":946,"name":"Section
+        with Due date Sep30","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":949,"name":"Sec
+        3 clone","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":954,"name":"NewSectionForTest","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":947,"name":"Sec2
+        TestClone","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null}]'
     http_version: 
-  recorded_at: Thu, 16 Jul 2015 22:37:32 GMT
+  recorded_at: Tue, 11 Aug 2015 12:39:56 GMT
 recorded_with: VCR 2.9.3
