@@ -12,7 +12,7 @@ module Canvas
                                   # })
 
     def create_conversation(body: {})
-      post_single __method__, body: body
+      post_collection __method__, body: body
     end
 
   end

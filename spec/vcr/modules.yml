@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/modules?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/modules?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK
     body:
       encoding: US-ASCII
       string: ''
@@ -23,9 +23,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Jul 2015 22:37:30 GMT
+      - Tue, 11 Aug 2015 12:40:21 GMT
       Etag:
-      - '"bf69e9be809460f52c215c9b9584a6ea"'
+      - '"3cedf7a69dc7f383b064b6c953f842a7"'
       Link:
       - <https://softservepartnership.test.instructure.com/api/v1/courses/40/modules?page=1&per_page=10>;
         rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/modules?page=1&per_page=10>;
@@ -36,16 +36,16 @@ http_interactions:
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=PDUvalxdHsLYj1SoODFSgby%2BrFUQzuqwChOSnSK%2FvdxVcBktaAtIpZDjE9xRBB7b146aP3v5mshCRNTxb4%2FP7Q%3D%3D;
+      - _csrf_token=p6HPEWVwKK9Jpd4wAmsuKKBVOi0gCQ6gpwzU2nmMpAP1ioYoMSd5%2BR%2FC7htDORdy8g18W3ZEfOnVR7KMOrvwSg%3D%3D;
         path=/; secure
-      - canvas_session=9St5laRMqpISE430AmFjSw.vIUmZ2SFIbTg8sV50lAAICho0xgdHtYqDotIWda2QobSD6u9GePnPNXL3oaKEkOAHzfZ_GtU6fwXNAeq_MLDAv2-IZSD7sry4c462ukG4K0v57taD4MYMGTrZWCKMN04.pb6YaSoGmvM_xRBCbCiWt44Q8i0.VagyKw;
+      - canvas_session=OlJgzEuvgQw_Jd4kVxkjqA.03fMzkH_5dhhDfSuP1nKaMSLLdOBZJuycj4Z983JtfXyZiNz2oQYYgNx_W3jlhRSWxGcnO1jtE7fC4mFmuZ_orjAjFqhgOhBA_IxiDK1GKW71MU4EXZhbPRYxUie1--_.wQIPFZgU_gKwqpf4udr4CacMqGA.VcntNQ;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=context_modules_api;n=index;t=Course;i=40;b=847932;m=847932;u=0.34;y=0.01;d=0.18;
+      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=context_modules_api;n=index;t=Course;i=40;b=980780;m=980780;u=0.18;y=0.01;d=0.05;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -55,30 +55,29 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 9d2d4ef4-dd52-4de8-908a-2feed4a457fc
+      - a3b86e6c-48fa-4413-8ccc-e4d219eab28b
       X-Request-Cost:
-      - '0.5177856820000033'
+      - '0.23304031999995'
       X-Request-Processor:
-      - a023d96
+      - a023c27
       X-Robots-Tag:
       - none
       X-Runtime:
-      - '0.836017'
+      - '0.283311'
       X-Session-Id:
-      - 13f88bae179bb2b3d32f996550b1b71c
+      - 0d275d1631ff4d62e507fd31ee12ff7d
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '301'
+      - '328'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"id":42,"name":"Introduction","position":1,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"published":false,"items_count":1,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/42/items"},{"id":9,"name":"Module
-        1","position":2,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"published":true,"items_count":3,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/9/items"},{"id":10,"name":"Module
-        2","position":3,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"published":true,"items_count":4,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/10/items"},{"id":11,"name":"Module
-        3","position":4,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"published":true,"items_count":1,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/11/items"},{"id":43,"name":"qc
-        modul","position":5,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"published":false,"items_count":0,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/43/items"}]'
+      string: '[{"id":9,"name":"Module 1","position":1,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"state":"completed","completed_at":"2015-07-28T12:08:41Z","published":true,"items_count":4,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/9/items"},{"id":10,"name":"Module
+        2","position":2,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"state":"completed","completed_at":"2015-07-28T12:08:41Z","published":true,"items_count":1,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/10/items"},{"id":11,"name":"Module
+        3","position":3,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"state":"completed","completed_at":"2015-07-28T12:08:41Z","published":true,"items_count":0,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/11/items"},{"id":14,"name":"AB
+        Test Module 1","position":4,"unlock_at":null,"require_sequential_progress":false,"publish_final_grade":false,"prerequisite_module_ids":[],"state":"completed","completed_at":"2015-07-30T06:02:16Z","published":true,"items_count":3,"items_url":"https://softservepartnership.test.instructure.com/api/v1/courses/40/modules/14/items"}]'
     http_version: 
-  recorded_at: Thu, 16 Jul 2015 22:37:31 GMT
+  recorded_at: Tue, 11 Aug 2015 12:39:55 GMT
 recorded_with: VCR 2.9.3

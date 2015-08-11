@@ -1,9 +1,7 @@
 require 'spec_helper'
 
-access_token1 = 'zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf'
-access_token2 = '4240~08TkpTBOhNE4SmyX4mKyXUVZGG76QyodFzc6AboUHRFwPYOdqKkkrM0rKcCyKUhY'
 credentials = {
-    access_token: access_token1,
+    access_token: '4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK',
     host: 'https://softservepartnership.test.instructure.com'
 }
 
@@ -25,6 +23,8 @@ describe Canvas do
     before :each do
       @api = Canvas::API.new(credentials)
     end
+    let(:account_id) { 39 }
+    let(:enrollment_id) { 20211 }
 
     context 'courses' do
       before :each do
@@ -38,7 +38,7 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@courses[0].name).to eq 'Mns Tennis'
+        expect(@courses[0].name).to eq 'Test Course Length'
       end
     end
 
@@ -75,7 +75,7 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@modules[0].name).to eq 'Introduction'
+        expect(@modules[0].name).to eq 'Module 1'
       end
     end
 
@@ -108,12 +108,31 @@ describe Canvas do
         expect(@study_plan.class).to eq Array
       end
 
-      it 'should contains modules which includes items' do
+      it 'should contains modules which include items' do
         expect(@study_plan[0].items.class).to eq Array
         expect(@study_plan[0].items.size).not_to eq 0
       end
     end
 
+    context '#enrollment' do
+
+      it 'should return struct with attributes accessible as methods' do
+        enrollment = nil
+        VCR.use_cassette 'enrollment' do
+          enrollment = @api.enrollment account_id: 1, enrollment_id: enrollment_id
+        end
+        expect(enrollment.id).to eq enrollment_id
+      end
+
+      it 'should return error without exception if non existing account retrieved' do
+        enrollment_id = -1
+        account = nil
+        VCR.use_cassette 'enrollment_not_found' do
+          account = @api.enrollment account_id: account_id, enrollment_id: enrollment_id
+        end
+        expect(account.errors[0]['message']).to eq 'The specified resource does not exist.'
+      end
+    end
 
     context 'enrollments' do
       before :each do
@@ -127,19 +146,19 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@enrollments[0].type).to eq 'StudentEnrollment'
+        expect(@enrollments[0].type).to eq 'ObserverEnrollment'
       end
 
       it 'should apply given query parameters' do
         VCR.use_cassette 'enrollments_with_params' do
           enrollments = @api.enrollments(course_id: 40, params: {type: 'StudentEnrollment'})
-          expect(enrollments.size).to eq 6
+          expect(enrollments.size).to eq 21
           expect(enrollments[0].type).to eq 'StudentEnrollment'
         end
 
         VCR.use_cassette 'enrollments_with_params_nothing_found' do
           enrollments = @api.enrollments(course_id: 40, params: {type: 'TeacherEnrollment'})
-          expect(enrollments.size).to eq 0
+          expect(enrollments.size).to eq 5
         end
       end
     end
@@ -157,16 +176,8 @@ describe Canvas do
     end
 
     context '#conclude_enrollment' do
-      before :all do
-        credentials[:access_token] = access_token2
-      end
-      after :all do
-        credentials[:access_token] = access_token1
-      end
-
       it 'returns the same enrollment' do
         concluded_enrollment = nil
-        enrollment_id = 20211
         VCR.use_cassette 'conclude_enrollment' do
           concluded_enrollment = @api.conclude_enrollment(course_id: 40, enrollment_id: enrollment_id)
         end
@@ -177,13 +188,6 @@ describe Canvas do
     end
 
     context '#admins' do
-      before :all do
-        credentials[:access_token] = access_token2
-      end
-      after :all do
-        credentials[:access_token] = access_token1
-      end
-      let(:account_id) { 39 }
 
       it 'returns an Array of admins' do
         admins = nil
@@ -204,5 +208,38 @@ describe Canvas do
 
     end
 
+    context '#account' do
+      it 'should return struct with attributes accessible as methods' do
+        account = nil
+        VCR.use_cassette 'account' do
+          account = @api.account account_id: account_id
+        end
+        expect(account.default_time_zone).to eq 'America/Denver'
+      end
+
+      it 'should return error without exception if non existing account retrieved' do
+        account_id = -1
+        account = nil
+        VCR.use_cassette 'account_not_found' do
+          account = @api.account account_id: -1
+        end
+        expect(account.errors[0]['message']).to eq 'The specified resource does not exist.'
+      end
+    end
+
+    context '#create_conversation' do
+      it 'returns created conversation' do
+        body = {
+            recipients: [2],
+            subject:    'Test subject',
+            body:       'Test body'
+        }
+        created_conversations = nil
+        VCR.use_cassette 'created_conversation' do
+          created_conversations = @api.create_conversation(body: body)
+        end
+        expect(created_conversations[0].id).to be > 0
+      end
+    end
   end
 end

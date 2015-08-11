@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?access_token=zhFiPxnVg728KKFpDHs4UEJvuqDooEQIeBBsEjR6mX5rQRGlSJv9vTIrKjj2KYuf&type=TeacherEnrollment
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000&type=TeacherEnrollment
     body:
       encoding: US-ASCII
       string: ''
@@ -23,29 +23,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 16 Jul 2015 22:41:09 GMT
+      - Tue, 11 Aug 2015 12:43:27 GMT
       Etag:
-      - '"d751713988987e9331980363e24189ce"'
+      - '"84560233b431c10ac5870b8bbc51160a"'
       Link:
-      - <https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=10>;
-        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=10>;
-        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=10>;
+      - <https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=100>;
+        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=100>;
+        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses/40/enrollments?type=TeacherEnrollment&page=1&per_page=100>;
         rel="last"
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=%2FLrWdG8ukDIhmNeWRmVITwOwbfWqyyK%2BJjLPeW24%2FqOti7MgBWbJVmn2lPhyXQM6Uokbn%2B6OZ8h1Bb8%2BGIuN5Q%3D%3D;
+      - _csrf_token=EMucl0XqdzPBo8%2B5j8fHTHtNvqpELt3cGniaGMW9aAFAvPXNKJ1YAZDHn%2FTtsfEpQx%2Fc6zVLjKstN%2Bpu9%2FUNUA%3D%3D;
         path=/; secure
-      - canvas_session=KSFpjRXgB9najdzkptbJLA.kIQkR_RX3hRR2JbVCjhwKHcFicASMhK1ViiCUGz_KBiv4sNw4-0Z0kUvg9epr2VxJxsSVUP5ENqU-YLFSOKEkl0y85O30gqMI_5mb4TlqSPfvEbv8ICHDT44VZuiGUdA.j_jkJ4z-O9SSEiIp7-lt1fBijgU.VagzBg;
+      - canvas_session=F5diIxbBGWPZQTkCcIZOjw.jtqUCAgF1coTB40QEU8R_1pOiasEy6fxATcD86lqD5tuE4EEpncyUL3uy7pOf467DJMNREa_gk_qccAtph4VjsPhPWg-J4nUGKYmEwdJSSaoRn3dNYjn8uM4xrXRQcAB.1m8EPKqSNciO7jsbcKwKCFzBAWo.Vcnt8A;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000041;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=enrollments_api;n=index;t=Course;i=40;b=918624;m=918624;u=0.14;y=0.01;d=0.05;
+      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=enrollments_api;n=index;t=Course;i=40;b=1046316;m=1046316;u=0.36;y=0.02;d=0.06;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -55,26 +55,26 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 054b61af-a125-4514-8439-63685496e147
+      - 202b2620-e74f-4478-9f57-91c6891b3e89
       X-Request-Cost:
-      - '0.18821371899998635'
+      - '0.42444470299989995'
       X-Request-Processor:
-      - a023c36
+      - a023c27
       X-Robots-Tag:
       - none
       X-Runtime:
-      - '0.273385'
+      - '0.508136'
       X-Session-Id:
-      - 517940bd2ecdbf32532ae021d924fa57
+      - 013353599b5b0982ee610d2932fef71d
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '22'
+      - '650'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: "[]"
+      string: '[{"associated_user_id":null,"course_id":40,"course_section_id":935,"created_at":"2015-07-30T14:04:47Z","end_at":null,"id":20293,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"TeacherEnrollment","updated_at":"2015-07-30T14:14:28Z","user_id":3395,"enrollment_state":"active","role":"Coach","role_id":9,"last_activity_at":"2015-07-30T14:14:29Z","total_activity_time":0,"sis_import_id":null,"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3395","user":{"id":3395,"name":"andreikaif@gmail.com","sortable_name":"andreikaif@gmail.com","short_name":"andreikaif@gmail.com","sis_user_id":"123asd","integration_id":null,"sis_login_id":"andreikaif@gmail.com","sis_import_id":null,"login_id":"andreikaif@gmail.com"}},{"associated_user_id":null,"course_id":40,"course_section_id":945,"created_at":"2015-07-30T04:20:43Z","end_at":null,"id":20287,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"TeacherEnrollment","updated_at":"2015-08-03T08:25:47Z","user_id":3389,"enrollment_state":"active","role":"TeacherEnrollment","role_id":4,"last_activity_at":"2015-08-07T12:24:51Z","total_activity_time":2073,"sis_import_id":null,"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3389","user":{"id":3389,"name":"teacher1","sortable_name":"teacher1","short_name":"teacher1","login_id":"bandrik+teacher1@gmail.com"}},{"associated_user_id":null,"course_id":40,"course_section_id":945,"created_at":"2015-07-30T04:20:43Z","end_at":null,"id":20288,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"TeacherEnrollment","updated_at":"2015-08-04T12:42:53Z","user_id":3390,"enrollment_state":"active","role":"TeacherEnrollment","role_id":4,"last_activity_at":"2015-08-07T14:12:36Z","total_activity_time":1012,"sis_import_id":null,"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3390","user":{"id":3390,"name":"teacher2","sortable_name":"teacher2","short_name":"teacher2","login_id":"bandrik+teacher2@gmail.com"}},{"associated_user_id":null,"course_id":40,"course_section_id":945,"created_at":"2015-07-30T04:20:43Z","end_at":null,"id":20289,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"TeacherEnrollment","updated_at":"2015-08-07T12:17:15Z","user_id":3391,"enrollment_state":"active","role":"TeacherEnrollment","role_id":4,"last_activity_at":"2015-08-07T12:17:17Z","total_activity_time":0,"sis_import_id":null,"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3391","user":{"id":3391,"name":"teacher3","sortable_name":"teacher3","short_name":"teacher3","login_id":"bandrik+teacher3@gmail.com"}},{"associated_user_id":null,"course_id":40,"course_section_id":945,"created_at":"2015-07-30T04:21:05Z","end_at":null,"id":20290,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"TeacherEnrollment","updated_at":"2015-07-30T04:21:05Z","user_id":3392,"enrollment_state":"invited","role":"TeacherEnrollment","role_id":4,"last_activity_at":null,"total_activity_time":0,"sis_import_id":null,"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3392","user":{"id":3392,"name":"teacher4","sortable_name":"teacher4","short_name":"teacher4","login_id":"bandrik+teacher4@gmail.com"}}]'
     http_version: 
-  recorded_at: Thu, 16 Jul 2015 22:41:10 GMT
+  recorded_at: Tue, 11 Aug 2015 12:43:01 GMT
 recorded_with: VCR 2.9.3
