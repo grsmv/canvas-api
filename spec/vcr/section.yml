@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://softservepartnership.test.instructure.com/api/v1/sections/936?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&course_section%5Bend_at%5D=2015-09-03%2021:00:00%20UTC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2015 13:39:11 GMT
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=xhFi7MM84lvxV%2F0SDLy5PJi%2FJp%2F5u0ypZ9ZuJlQKixqAfFWIh0SmL8gvhWppiYFdr8tM7brpO8YNoThLJX%2FGcg%3D%3D;
+        path=/; secure
+      Status:
+      - 401 Unauthorized
+      Vary:
+      - Accept-Encoding
+      Www-Authenticate:
+      - Bearer realm="canvas-lms"
+      X-Canvas-Meta:
+      - b=985000;m=985000;u=0.23;y=0.01;d=0.02;
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - fbcc0b77-958f-4ebe-89e1-58945a99f4ca
+      X-Request-Cost:
+      - '0.2548520030000182'
+      X-Request-Processor:
+      - a023c27
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.328592'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '86'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"course_id":40,"end_at": "2015-09-03 21:00:00 UTC","id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,
+      "sis_course_id":"9950054","integration_id":null,"sis_import_id":null}'
+    http_version:
+  recorded_at: Mon, 31 Aug 2015 13:39:00 GMT
+recorded_with: VCR 2.9.3

@@ -23,6 +23,20 @@ describe Canvas do
     before :each do
       @api = Canvas::API.new(credentials)
     end
+
+    context 'update section' do
+      before :each do
+        VCR.use_cassette 'section' do
+          @section = @api.update_section(section_id: 936, body: {
+            course_section: { end_at: "2015-09-03 21:00:00 UTC" } }
+          )
+        end
+      end
+      it 'should return array of submissions' do
+        expect(@section.end_at).to eq "2015-09-03 21:00:00 UTC"
+      end
+    end
+
     let(:account_id) { 39 }
     let(:enrollment_id) { 20211 }
 
@@ -185,21 +199,6 @@ describe Canvas do
         expect(concluded_enrollment.enrollment_state).to eq 'completed'
       end
 
-      context '#create_conversation' do
-        it 'returns created conversation' do
-          body = {
-              recipients: [2],
-              subject:    'Test subject',
-              body:       'Test body'
-          }
-          created_conversations = nil
-          VCR.use_cassette 'created_conversation' do
-            created_conversations = @api.create_conversation(body: body)
-          end
-          expect(created_conversations[0].id).to be > 0
-        end
-      end
-
     end
 
     context '#admins' do
@@ -241,6 +240,22 @@ describe Canvas do
         expect(account.errors[0]['message']).to eq 'The specified resource does not exist.'
       end
     end
+
+    context '#create_conversation' do
+      it 'returns created conversation' do
+        body = {
+            recipients: [2],
+            subject:    'Test subject',
+            body:       'Test body'
+        }
+        created_conversations = nil
+        VCR.use_cassette 'created_conversation' do
+          created_conversations = @api.create_conversation(body: body)
+        end
+        expect(created_conversations[0].id).to be > 0
+      end
+    end
+
 
   end
 end
