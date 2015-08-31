@@ -44,7 +44,7 @@ module Canvas
     items:                      '/api/v1/courses/%{course_id}/modules/%{module_id}/items',
     sections:                   '/api/v1/courses/%{course_id}/sections',
     section:                    '/api/v1/courses/%{course_id}/sections/%{section_id}',
-    update_section:             '/api/v1/courses/%{course_id}/sections/%{section_id}',
+    update_section:             '/api/v1/sections/%{section_id}',
     section_enrollments:        '/api/v1/sections/%{section_id}/enrollments',
     quiz:                       '/api/v1/courses/%{course_id}/quizzes/%{content_id}',
     assignment:                 '/api/v1/courses/%{course_id}/assignments/%{content_id}',
