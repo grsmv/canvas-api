@@ -69,13 +69,13 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"course_id":40,"end_at":null,"id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":936,"name":"9950054222","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":944,"name":"test
+      string: '[{"course_id":40,"end_at": "2015-09-03 21:00:00 UTC","id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":936,"name":"9950054222","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":944,"name":"test
         default","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":945,"name":"Test
         Section 1","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-08-01T06:00:00Z","id":948,"name":"Sec3
         Try to clone","nonxlist_course_id":null,"start_at":"2015-07-30T06:00:00Z","sis_section_id":"12345","sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-09-30T06:00:00Z","id":946,"name":"Section
         with Due date Sep30","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":949,"name":"Sec
         3 clone","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":954,"name":"NewSectionForTest","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":947,"name":"Sec2
         TestClone","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null}]'
-    http_version: 
+    http_version:
   recorded_at: Tue, 11 Aug 2015 12:39:56 GMT
 recorded_with: VCR 2.9.3

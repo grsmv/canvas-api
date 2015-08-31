@@ -23,6 +23,20 @@ describe Canvas do
     before :each do
       @api = Canvas::API.new(credentials)
     end
+
+    context 'update section' do
+      before :each do
+        VCR.use_cassette 'section' do
+          @section = @api.update_section(section_id: 936, body: {
+            course_section: { end_at: "2015-09-03 21:00:00 UTC" } }
+          )
+        end
+      end
+      it 'should return array of submissions' do
+        expect(@section.end_at).to eq "2015-09-03 21:00:00 UTC"
+      end
+    end
+
     let(:account_id) { 39 }
     let(:enrollment_id) { 20211 }
 
@@ -241,5 +255,7 @@ describe Canvas do
         expect(created_conversations[0].id).to be > 0
       end
     end
+
+
   end
 end
