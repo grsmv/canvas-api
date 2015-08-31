@@ -185,6 +185,21 @@ describe Canvas do
         expect(concluded_enrollment.enrollment_state).to eq 'completed'
       end
 
+      context '#create_conversation' do
+        it 'returns created conversation' do
+          body = {
+              recipients: [2],
+              subject:    'Test subject',
+              body:       'Test body'
+          }
+          created_conversations = nil
+          VCR.use_cassette 'created_conversation' do
+            created_conversations = @api.create_conversation(body: body)
+          end
+          expect(created_conversations[0].id).to be > 0
+        end
+      end
+
     end
 
     context '#admins' do
@@ -227,19 +242,5 @@ describe Canvas do
       end
     end
 
-    context '#create_conversation' do
-      it 'returns created conversation' do
-        body = {
-            recipients: [2],
-            subject:    'Test subject',
-            body:       'Test body'
-        }
-        created_conversations = nil
-        VCR.use_cassette 'created_conversation' do
-          created_conversations = @api.create_conversation(body: body)
-        end
-        expect(created_conversations[0].id).to be > 0
-      end
-    end
   end
 end

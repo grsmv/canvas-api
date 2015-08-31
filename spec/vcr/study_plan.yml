@@ -5223,4 +5223,196 @@ http_interactions:
         Short","submission_types":["none"],"has_submitted_submissions":false,"muted":false,"html_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/32","has_overrides":true,"needs_grading_count":0,"integration_id":null,"integration_data":{},"published":true,"unpublishable":true,"only_visible_to_overrides":false,"locked_for_user":false,"submissions_download_url":"https://softservepartnership.test.instructure.com/courses/40/assignments/32/submissions?zip=1"}'
     http_version: 
   recorded_at: Tue, 11 Aug 2015 14:23:58 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/assignments/32?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2015 13:37:56 GMT
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=8QLy68g1wcZ2m3rZbgg%2FTJI4O%2Be80FbAdiHyeCJRWC2EVaPZ52WHnhTxHYEbaX19%2FlB8s%2FSdFPgcbKsiUTcIZA%3D%3D;
+        path=/; secure
+      Status:
+      - 401 Unauthorized
+      Vary:
+      - Accept-Encoding
+      Www-Authenticate:
+      - Bearer realm="canvas-lms"
+      X-Canvas-Meta:
+      - b=985092;m=985092;u=0.21;y=0.00;d=0.03;
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '690.1951003891855'
+      X-Request-Context-Id:
+      - 954238db-996d-443f-adce-bf9ecb658078
+      X-Request-Cost:
+      - '0.24479142600000797'
+      X-Request-Processor:
+      - a023dbc
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.443036'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '86'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"message":"Invalid access token."}],"error_report_id":7910}'
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 13:37:45 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/assignments/10/overrides?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2015 13:37:56 GMT
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=8Mlw7M8mj5lX894rcP2oDlmZghWSQM1%2F%2FFcRRLXRi1HAq1%2BArHfYygGk53gCl8NravDETOAt%2FCutMykj%2B6jEeg%3D%3D;
+        path=/; secure
+      Status:
+      - 401 Unauthorized
+      Vary:
+      - Accept-Encoding
+      Www-Authenticate:
+      - Bearer realm="canvas-lms"
+      X-Canvas-Meta:
+      - b=985000;m=985000;u=0.27;y=0.01;d=0.02;
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 7d213545-0905-468a-9b09-7b4b7af13241
+      X-Request-Cost:
+      - '0.29381360300003867'
+      X-Request-Processor:
+      - a023c27
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.435066'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '86'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"message":"Invalid access token."}],"error_report_id":7909}'
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 13:37:45 GMT
+- request:
+    method: get
+    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/assignments/29/overrides?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Aug 2015 13:49:41 GMT
+      P3p:
+      - CP="None, see http://www.instructure.com/privacy-policy"
+      Server:
+      - Apache
+      Set-Cookie:
+      - _csrf_token=4pdHt9mrBy0nLKZs2OZ1uxETtfIOGy46FphRYYH9v2CMvD%2F0kP9qQhBhxA6TtAzWYiDnnVZhZQpRwCUkyqn0Lg%3D%3D;
+        path=/; secure
+      Status:
+      - 401 Unauthorized
+      Vary:
+      - Accept-Encoding
+      Www-Authenticate:
+      - Bearer realm="canvas-lms"
+      X-Canvas-Meta:
+      - b=985000;m=985000;u=0.18;y=0.00;d=0.01;
+      X-Rack-Cache:
+      - miss
+      X-Rate-Limit-Remaining:
+      - '700'
+      X-Request-Context-Id:
+      - 2e8bad1f-99bb-415c-8ec1-6a791611f559
+      X-Request-Cost:
+      - '0.19147250900006366'
+      X-Request-Processor:
+      - a023c27
+      X-Robots-Tag:
+      - none
+      X-Runtime:
+      - '0.280920'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '86'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"message":"Invalid access token."}],"error_report_id":7975}'
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 13:49:29 GMT
 recorded_with: VCR 2.9.3

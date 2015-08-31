@@ -5,7 +5,7 @@ module Canvas
     end
 
     def update_section(section_id:, body: {})
-      put_single __method__, ids: {section_id: section_id }, body: body
+      put_single __method__, ids: { section_id: section_id }, body: body
     end
   end
 end
