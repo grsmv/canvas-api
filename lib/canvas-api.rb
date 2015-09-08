@@ -1,7 +1,8 @@
 require 'addressable/uri'
-require 'httparty'
-require 'vcr'
 require 'base64'
+require 'httparty'
+require 'link_header'
+require 'vcr'
 
 require_relative './canvas-api/assignment'
 require_relative './canvas-api/assignment_overrides'
@@ -178,6 +179,12 @@ module Canvas
       uri.query_values = params.merge(access_token: options[:access_token])
       resource = Canvas::Endpoints[method_name.to_sym] % ids
       "#{@options[:host]}#{resource}?#{uri.query}"
+    end
+
+    def next_link(headers)
+      return nil unless headers.member? 'Link'
+      link_tuple = LinkHeader.parse(headers['Link']).links.select {|l| l.attr_pairs[0][1] == 'next'}
+      link_tuple.size.zero? ? nil : link_tuple[0].href
     end
   end
 end

@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'fuubar',    '2.0.0'
 
   s.add_runtime_dependency 'httparty',    '0.13.5'
+  s.add_runtime_dependency 'link_header', '0.0.8'
   s.add_runtime_dependency 'parallel',    '1.6.0'
   s.add_runtime_dependency 'addressable', '2.3.8'
   s.add_runtime_dependency 'vcr',         '2.9.3'
