@@ -16,10 +16,31 @@ module Canvas
     #
     def study_plan(course_id:)
       course_modules = modules(course_id: course_id)
+
+      # Updating IDs for discussions and quizzes 'cause Canvas has 2 IDs for
+      # each corresponding item - all depends on a way which we use to retrieve them.
+      # And we should use one, which came from `assignments` endpoint.
+      assignments = self.assignments(course_id: course_id)
+      update_ids_for_discussions_and_quizzes = -> (items) do
+        items.map do |item|
+          if %w(Quiz Discussion).include? item.type
+            item.id = assignments.select do |a|
+              item.content_id == case item.type
+                                   when 'Discussion'
+                                     a.discussion_topic['id'] if a.respond_to? :discussion_topic
+                                   when 'Quiz'
+                                     a.quiz_id if a.respond_to? :quiz_id
+                                 end
+            end.first.id
+          end
+          item
+        end
+      end
+
       update_module = lambda do |m|
         m.tap do |mod|
           unless mod.items_count.zero?
-            items = self.items(course_id: course_id, module_id: mod.id)
+            items = update_ids_for_discussions_and_quizzes.call(self.items course_id: course_id, module_id: mod.id)
             mod.items = fill_due_dates course_id, items
           end
         end
