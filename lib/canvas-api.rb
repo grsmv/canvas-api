@@ -123,12 +123,13 @@ module Canvas
       puts "#{http_verb.upcase}" + endpoint if @options[:verbose]
 
       fetching_data = lambda do
-        content = HTTParty.send(http_verb.to_sym, endpoint, query: body)
-        begin
-          result_formatting.call content
+        raw_responce = HTTParty.send(http_verb.to_sym, endpoint, query: body)
+        formatted_responce = begin
+          result_formatting.call raw_responce
         rescue
           nil
         end
+        [raw_responce, formatted_responce]
       end
 
       if @options[:cache]
@@ -138,16 +139,39 @@ module Canvas
       end
     end
 
-
     # Creating corresponding helpers for performing requests during class initialisation
     %i(get post put delete).each do |http_verb|
       define_method("#{http_verb}_single") do |method_name, ids: {}, params: {}, body: {}|
-        self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(s) { s.to_struct })
+        _, formatted_responce = self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(s) { s.to_struct })
+        formatted_responce
       end
 
       define_method("#{http_verb}_collection") do |method_name, ids: {}, params: {}, body: {}|
-        params[:per_page] = 10_000 if http_verb == :get and params[:per_page].nil?
-        self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
+        request = -> do
+          self.perform_request(http_verb, method_name, ids: ids, params: params, body: body, result_formatting: ->(cs){ cs.map &:to_struct })
+        end
+
+        # setting up default values, according to
+        # https://canvas.instructure.com/doc/api/file.pagination.html
+        if http_verb == :get
+          params[:per_page] ||= 100
+          params[:page] ||= 1
+        end
+
+        raw_responce, formatted_responce = request.call
+        responce_collection = formatted_responce
+
+        # checking if current responce is a portion from entire collection and getting
+        # whole amount of data with series of request
+        if http_verb == :get
+          until next_link(raw_responce.headers).nil?
+            params[:page] = params[:page] + 1
+            raw_responce, formatted_responce = request.call
+            responce_collection.concat(formatted_responce)
+          end
+        end
+
+        responce_collection
       end
     end
 
@@ -181,10 +205,21 @@ module Canvas
       "#{@options[:host]}#{resource}?#{uri.query}"
     end
 
+    # Getting link to next portion of a collection from responce headers
+    #
+    # == Parameters:
+    # headers::
+    #   collection of a responce headers
+    #
+    # == Returns:
+    #   nil | String with link to next results page
     def next_link(headers)
-      return nil unless headers.member? 'Link'
-      link_tuple = LinkHeader.parse(headers['Link']).links.select {|l| l.attr_pairs[0][1] == 'next'}
+      key = 'link'
+      return nil unless headers.member? key
+      link_tuple = LinkHeader.parse(headers[key]).links.select { |l| l.attr_pairs[0][1] == 'next' }
       link_tuple.size.zero? ? nil : link_tuple[0].href
     end
   end
 end
+
+
