@@ -180,7 +180,7 @@ module Canvas
 
     # Check whether module item is an assignment or not
     def self.assignment?(item)
-      %w(Assignment Quiz).include? item.type
+      %w(Assignment Quiz Discussion).include? item.type
     end
 
     private
