@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/accounts/39/enrollments/-1?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK
+    uri: https://softservepartnership.instructure.com/api/v1/accounts/41/enrollments/-1?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP
     body:
       encoding: US-ASCII
       string: ''
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 12:52:23 GMT
+      - Thu, 10 Sep 2015 15:58:50 GMT
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=laPhYtdpED7Wjh3YlafSTZ3V9BqRSEz8XbZzpAjpfJPz94Uy7152Z5nNUPft%2Frw1%2BZq6dPUSCqgRh0bFQKI%2F0Q%3D%3D;
+      - _csrf_token=gWrDICqx5HT9ukOr3MPRaigexmySmemGyOHii1YTfG%2FmCYoXU%2FXLNbHtcP64iZ9BYnODGeSgire%2Fm9fAOHZFPQ%3D%3D;
         path=/; secure
-      - canvas_session=711I2LCpN05RTjxeUOjvzA.ZCKy9lOzpD8qcPxWZE5ixFIi9U3foU3AxOC_bQhWKK-agfqD1_4SQrdq9q1ZBwOTWL7YjG2CDN9k2U8MkwIbM9gGXAau7AcDDtGw82vPpxS8u54skHeTzTtM8aPFXr5s.FmDzwbwAn9ZeaiSOhZeCFut3EWE.VcnwCA;
+      - canvas_session=dH_nQwas3q4M7RXmP9JnMQ.ty9BxaHLXaRuh_OSCsku5_jLcn2ggJuWFDwHGRHgpQ8fzTo3sL5QJfvPzez45iYSYRxjwR2ULoN80OgvHcV916ct5flssA4PECU4ez-wWizjXqfTn3LeTyQLI13dwJfU.tp0BGkcbaeZeIRhKTXF9ynjlKNc.VfGouw;
         path=/; secure; HttpOnly
       Status:
       - 404 Not Found
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;b=1111852;m=1111852;u=0.08;y=0.01;d=0.05;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;b=1133592;m=1133592;u=0.05;y=0.00;d=0.01;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Rack-Cache:
@@ -46,26 +46,24 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - cfce658e-de86-4d87-a437-25cdfaa5ae20
+      - e27c80b3-e6d9-4a4d-87ae-9202dfe327ca
       X-Request-Cost:
-      - '0.13319254799992725'
+      - '0.06110057200001137'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01cad7
       X-Runtime:
-      - '0.172734'
+      - '0.079116'
       X-Session-Id:
-      - d97e8613c7810623bf17f37d9a1cd9b3
+      - be74bf1d047fadf4dad3edfb7367a8dc
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '100'
+      - '101'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"errors":[{"message":"The specified resource does not exist."}],"error_report_id":1115}'
+      string: '{"errors":[{"message":"The specified resource does not exist."}],"error_report_id":43922}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 12:51:57 GMT
+  recorded_at: Thu, 10 Sep 2015 15:58:51 GMT
 recorded_with: VCR 2.9.3

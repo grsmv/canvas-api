@@ -214,7 +214,7 @@ module Canvas
     # == Returns:
     #   nil | String with link to next results page
     def next_link(headers)
-      key = 'link'
+      key = 'link' # todo: can be 'Link' as well
       return nil unless headers.member? key
       link_tuple = LinkHeader.parse(headers[key]).links.select { |l| l.attr_pairs[0][1] == 'next' }
       link_tuple.size.zero? ? nil : link_tuple[0].href

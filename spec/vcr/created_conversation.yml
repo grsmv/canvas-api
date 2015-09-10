@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://softservepartnership.test.instructure.com/api/v1/conversations?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&body=Test%20body&recipients%5B%5D=2&subject=Test%20subject
+    uri: https://softservepartnership.instructure.com/api/v1/conversations?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP&body=Test%20body&recipients%5B%5D=2&subject=Test%20subject
     body:
       encoding: UTF-8
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 13:09:50 GMT
+      - Thu, 10 Sep 2015 16:09:14 GMT
       Etag:
-      - '"1eba02468e47534c0b66fc3a8a6b633c"'
+      - '"107e1bd233b839830c8415966ddaf9b2"'
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=xhD0OBpLEz9%2Bji8tsv7rarHliUXcMEyuusJxF8ipEnGgW45BUxJWXR3fdX7n1YQv%2FdfoCOoFAvb1tRthju9qQA%3D%3D;
+      - _csrf_token=0pJUGCVJz1gtseU95fLakhWZ7Xl577VR7c%2BC%2BzsIS7CbwAVqfCe%2FLEGGj1SroYm9c%2Bu8D1KX4Hq5quG2TE0f5Q%3D%3D;
         path=/; secure
-      - canvas_session=9KdbIXuNcyGusjDZQKFoOA.imRZLUJKvKH7hLnXHqIcsxdHxfb3iPR-u7o7BBZIelsPZD-xzoRjlJqpFn-ZMAK57f_OnNWMSn4B2AkISjv4pJnKDCRo46yZfIcaagP4XTGc520_rsC09oIpIgnTzj5A.zZtGKzQMpPlRz65RhsFNbG9_FCI.Vcn0Hw;
+      - canvas_session=j7Q4vcpas4vbqRGJVdjkEw.ONuxiu6-uMzf2Wy8FlCT7ZRKze7V3PJ2-A6ENaA2lvcNNGq_aaPeP1D90CZbDPb38TtO2x55RkAam_uQbihIsbVRHW345suxwMB87JEBCMb87zNsoPqWBDwYuamxK8Wy.Fv_DYLClm4hmmrj5A7fUM6AvZkE.VfGrKw;
         path=/; secure; HttpOnly
       Status:
       - 201 Created
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=conversations;n=create;b=911020;m=911020;u=0.37;y=0.02;d=0.16;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1e;o=conversations;n=create;b=1065964;m=1065964;u=0.18;y=0.01;d=0.20;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -50,28 +50,26 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 809ae689-c8a6-4f46-9989-f393d634e931
+      - 8307edf0-7fa2-4d85-b291-0ea9f1ff0d7b
       X-Request-Cost:
-      - '0.5311541060000009'
+      - '0.3808840220000068'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01d8fa
       X-Runtime:
-      - '0.620387'
+      - '0.412401'
       X-Session-Id:
-      - 8712bee6298e8586cf5b272db72bb38d
+      - c0f0cd1713694a2fc216cf8d940e776c
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '474'
+      - '476'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: '[{"id":2,"subject":"test conversation","workflow_state":"read","last_message":null,"last_message_at":null,"last_authored_message":"Test
-        body","last_authored_message_at":"2015-08-11T13:09:51Z","message_count":5,"subscribed":true,"private":true,"starred":false,"properties":["last_author"],"messages":[{"author_id":2,"body":"Test
-        body","created_at":"2015-08-11T13:09:51Z","generated":false,"id":162,"forwarded_messages":[],"attachments":[],"media_comment":null,"participating_user_ids":[2]}],"audience":[],"audience_contexts":{"courses":{},"groups":{}},"avatar_url":"https://secure.gravatar.com/avatar/003f3ecc6fcd3322d3d147402a40e61e?s=50\u0026d=https%3A%2F%2Fcanvas.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","participants":[{"id":2,"name":"divanov@softserveinc.com","common_courses":{},"common_groups":{},"avatar_url":"https://secure.gravatar.com/avatar/003f3ecc6fcd3322d3d147402a40e61e?s=50\u0026d=https%3A%2F%2Fcanvas.instructure.com%2Fimages%2Fmessages%2Favatar-50.png"}],"visible":false,"context_code":null}]'
+        body","last_authored_message_at":"2015-09-10T16:09:14Z","message_count":69,"subscribed":true,"private":true,"starred":false,"properties":["last_author"],"messages":[{"author_id":2,"body":"Test
+        body","created_at":"2015-09-10T16:09:14Z","generated":false,"id":3969,"forwarded_messages":[],"attachments":[],"media_comment":null,"participating_user_ids":[2]}],"audience":[],"audience_contexts":{"courses":{},"groups":{}},"avatar_url":"https://secure.gravatar.com/avatar/003f3ecc6fcd3322d3d147402a40e61e?s=50\u0026d=https%3A%2F%2Fcanvas.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","participants":[{"id":2,"name":"divanov@softserveinc.com","common_courses":{},"common_groups":{},"avatar_url":"https://secure.gravatar.com/avatar/003f3ecc6fcd3322d3d147402a40e61e?s=50\u0026d=https%3A%2F%2Fcanvas.instructure.com%2Fimages%2Fmessages%2Favatar-50.png"}],"visible":false,"context_code":null}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:09:25 GMT
+  recorded_at: Thu, 10 Sep 2015 16:09:15 GMT
 recorded_with: VCR 2.9.3

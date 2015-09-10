@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/courses?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000
+    uri: https://softservepartnership.instructure.com/api/v1/courses?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP&page=1&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,29 +23,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 12:40:18 GMT
+      - Thu, 10 Sep 2015 15:26:15 GMT
       Etag:
-      - '"2f6026727c21371067ca36386f858ec1"'
+      - '"6126286bb6bcbf33a26376a6f775f7cc"'
       Link:
-      - <https://softservepartnership.test.instructure.com/api/v1/courses?page=1&per_page=100>;
-        rel="current",<https://softservepartnership.test.instructure.com/api/v1/courses?page=1&per_page=100>;
-        rel="first",<https://softservepartnership.test.instructure.com/api/v1/courses?page=1&per_page=100>;
+      - <https://softservepartnership.instructure.com/api/v1/courses?page=1&per_page=100>;
+        rel="current",<https://softservepartnership.instructure.com/api/v1/courses?page=1&per_page=100>;
+        rel="first",<https://softservepartnership.instructure.com/api/v1/courses?page=1&per_page=100>;
         rel="last"
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=B0lCx%2Bwzwv0ejGksU5S261AxAiaZrLevYAb03ft3uEVsOTWdvkGtk0q5DVkU4se6OQNaTKHkz%2B4mYYGMvQ%2FJNQ%3D%3D;
+      - _csrf_token=ng0OBZLMIDVnlsRRtUK0WFrtv%2B5lWPr%2F2GYi1GvhGkbbfEMy24hPRF7ArxfaKe4MaqvQqyw6mZKgPGWfXadKIg%3D%3D;
         path=/; secure
-      - canvas_session=Mn15wiVtw0SUicN0W-JZVA.wAzeQPEz_S4lK7IWZJ7UMV8sSg4id69ZwKTpE8lXudL1pLa0BwGHkKtvL3loNX4kOdynLLaHyQq8--HyoGQgcICOAEhWB0QESDngpeowk3bS_UykJev4eoOj7Y3llzQ4.AHruSku68y_FgQiKMxaebo9y32E.VcntMg;
+      - canvas_session=OjzkjiaizUJ-ZgtDysaINQ.k_RyIMT88tR_adeLU8l5ORQIDXnncH2gn8qzD3oFAQ9R5mjbla6auAg22vG8Ix69fGzWLODVvoebp52qnJHDmGFWJHS5lGDXqba9Lp14JadyYfWgAKOGb-OlbmxqjnH8.LOUq2P_CCjs7_wpW5IbnCs_MFhI.VfGhGA;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=courses;n=index;b=1046316;m=1046316;u=0.26;y=0.01;d=0.04;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=courses;n=index;b=1133104;m=1133104;u=0.21;y=0.02;d=0.02;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -55,32 +55,47 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - e428e1c3-7e73-4782-83ff-4ea46096841a
+      - c214122b-6f62-4b0e-b3eb-a47d8bc98e98
       X-Request-Cost:
-      - '0.3046099699999909'
+      - '0.23296789300003637'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01d3ed
       X-Runtime:
-      - '0.388421'
+      - '0.293843'
       X-Session-Id:
-      - 03e21fb7ba78a950516d6d7e3ac71cff
+      - f0d824999540f176d9700001d42e9fa9
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '741'
+      - '1591'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"account_id":41,"course_code":"Test Course Length","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":941,"is_public":false,"name":"Test
-        Course Length","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_qhKjBcwci4i4OvowidjMlpMJO7QlXvzMfZyAnAi3.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"},{"account_id":41,"course_code":"sdjaljl''","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":936,"is_public":false,"name":"sdjaljl''
-        nklxnf","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_8DkvwpVIxn2UjALSt5RPqJi9vIKPmudX3mMeGPOq.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"},{"account_id":1,"course_code":"TestingCreation","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":939,"is_public":false,"name":"BrandNewCourse","start_at":"2015-08-06T07:12:00Z","end_at":"2015-08-07T12:00:00Z","public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_gIa3nBkenxennotisP5LFoNknMDsfV6HqwmZSirZ.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"student","role":"StudentEnrollment","role_id":3,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":39,"course_code":"Mns
-        Tennis","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":40,"is_public":false,"name":"Mns
-        Tennis","start_at":"2015-06-01T14:12:00Z","end_at":"2015-08-01T06:00:00Z","public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_HB0EhYCpxVJaffeL6RP5Q9GyomuFxdlgXGYtVupD.ics"},"sis_course_id":"9950054","integration_id":null,"enrollments":[{"type":"student","role":"StudentEnrollment","role_id":3,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Test
-        New","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":974,"is_public":false,"name":"Test
-        Course New","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.test.instructure.com/feeds/calendars/course_M4QUlnrVsNwV4NOhNWXKtd1z6405uUDxPj9owaa7.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"}]'
+      string: '[{"account_id":41,"course_code":"G","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":994,"is_public":true,"name":"G
+        integration","start_at":"2015-09-09T12:05:25Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_ZyyHocjq0cLBuSMHuYrQoAP5l1QbXhzhrEWYitou.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Presentation","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":943,"is_public":false,"name":"Presentation
+        Course","start_at":"2015-08-11T15:17:54Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_dud6DkToxJ3wY4It7zRcdVG1ltwoID5FpxwkBtpD.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Y","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":957,"is_public":false,"name":"Y
+        course","start_at":"2015-08-18T13:53:46Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_mvbz4cqYXisVsw0ZcczGfKA4C88WrJFcqicFpX4a.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"test","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":959,"is_public":false,"name":"test
+        course","start_at":"2015-08-18T14:32:26Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_ugvdanwP8wUSUcZm0OptxD58Ve3JwYP7oiqaPP3V.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Test","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":942,"is_public":false,"name":"Test
+        Course Section","start_at":"2015-08-11T04:07:54Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_BJ81cS3NruDFhXD7bOJGhsSXubT7pF15eJbvCiKh.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Course","default_view":"feed","enrollment_term_id":1,"grading_standard_id":0,"id":990,"is_public":false,"name":"Course
+        for testing rejected users","start_at":"2015-09-02T15:25:00Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":true,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_omIIANSnI2JWsJMwFcP5gHhv9SDYgRtc23ndfaoS.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"student","role":"StudentEnrollment","role_id":3,"enrollment_state":"active"},{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Course","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":991,"is_public":false,"name":"Course
+        for Section","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_uTphTNPXIJUK9Jzice4CW3P1EfFN83Uf9oCxdxkK.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"},{"account_id":41,"course_code":"Test
+        3","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":988,"is_public":false,"name":"Test
+        3","start_at":"2015-08-31T04:00:55Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_WCmtkBxS3uO31JRn25xi2bmgya7TY8TAe9CUgdGA.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Course
+        for Enrolments","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":976,"is_public":false,"name":"Course
+        for Enrolments","start_at":"2015-08-21T09:23:00Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_NwnP8hkfzGKvgsy9t4pEoH5i6UReIAyu6c6N5VdK.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":1,"course_code":"TestingCreation","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":939,"is_public":false,"name":"BrandNewCourse","start_at":"2015-08-06T07:12:00Z","end_at":"2015-08-07T12:00:00Z","public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_gIa3nBkenxennotisP5LFoNknMDsfV6HqwmZSirZ.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"student","role":"StudentEnrollment","role_id":3,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":1,"course_code":"Test
+        Course AB","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":935,"is_public":null,"name":"Test
+        Course AB","start_at":"2015-08-04T20:10:56Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_W66YyTDkGkNmb3QMexp3o9iIhLJLVRgPdAwhlh0C.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"observer","role":"ObserverEnrollment","role_id":7,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Origami","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":969,"is_public":true,"name":"Origami
+        for dummies","start_at":"2015-08-19T07:32:37Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_MPKUYs9rKu2Q9q8Vk2tfhQfys9M8Z0rLydBhHqxW.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"QA","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":947,"is_public":false,"name":"QA
+        course","start_at":"2015-09-02T13:27:40Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_yitp9sxEREm03r2unoiP5ZBjhvCkFj4cc33FQ6Qd.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"sdjaljl''","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":936,"is_public":false,"name":"sdjaljl''
+        nklxnf","start_at":null,"end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_8DkvwpVIxn2UjALSt5RPqJi9vIKPmudX3mMeGPOq.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"unpublished"},{"account_id":41,"course_code":"Test
+        Course Length","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":941,"is_public":false,"name":"Test
+        Course Length","start_at":"2015-08-11T04:38:41Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_qhKjBcwci4i4OvowidjMlpMJO7QlXvzMfZyAnAi3.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Test","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":944,"is_public":false,"name":"Test
+        Start Dates","start_at":"2015-08-12T13:49:24Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_tqUNvWpoethbhqHRGKv5IcYPYkRlObZzk7PyypiK.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"},{"type":"student","role":"StudentEnrollment","role_id":3,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Test
+        1","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":951,"is_public":false,"name":"Test
+        1","start_at":"2015-08-16T20:47:43Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_EAyInnJHMJncdvYDfxCUHDZsFJX3XrVif3fcM8yW.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"},{"account_id":41,"course_code":"Test
+        2","default_view":"feed","enrollment_term_id":1,"grading_standard_id":null,"id":952,"is_public":false,"name":"Test
+        2","start_at":"2015-08-16T20:52:52Z","end_at":null,"public_syllabus":false,"storage_quota_mb":500,"is_public_to_auth_users":false,"apply_assignment_group_weights":false,"calendar":{"ics":"https://softservepartnership.instructure.com/feeds/calendars/course_i7d8XdYKGUQ8xa84epndx7edPXi6UoGDo0JxZNkR.ics"},"sis_course_id":null,"integration_id":null,"enrollments":[{"type":"teacher","role":"TeacherEnrollment","role_id":4,"enrollment_state":"active"}],"hide_final_grades":false,"workflow_state":"available"}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 12:39:52 GMT
+  recorded_at: Thu, 10 Sep 2015 15:26:16 GMT
 recorded_with: VCR 2.9.3

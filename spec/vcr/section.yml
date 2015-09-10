@@ -2,9 +2,9 @@
 http_interactions:
 - request:
     method: put
-    uri: https://softservepartnership.test.instructure.com/api/v1/sections/936?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&course_section%5Bend_at%5D=2015-09-03%2021:00:00%20UTC
+    uri: https://softservepartnership.instructure.com/api/v1/sections/1064?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP&course_section%5Bend_at%5D=2015-09-13T21:00:00Z
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       Accept-Encoding:
@@ -15,54 +15,60 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 31 Aug 2015 13:39:11 GMT
+      - Thu, 10 Sep 2015 15:23:08 GMT
+      Etag:
+      - '"064d5ee06060c879998619ab877fc95f"'
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=xhFi7MM84lvxV%2F0SDLy5PJi%2FJp%2F5u0ypZ9ZuJlQKixqAfFWIh0SmL8gvhWppiYFdr8tM7brpO8YNoThLJX%2FGcg%3D%3D;
+      - _csrf_token=7kE1vsyPAn4EOKbidWkpsR3J%2BpFrvVQvpxzsqaAYsgm7dVSRjsQ2FkFyzNAZC1uEcq2joFOLZVmQK5bgllrxTg%3D%3D;
         path=/; secure
+      - canvas_session=hB0MsoRwpeuxmeqjFMA-sA+ZQJq6VUoGD7o1YUhPPfIDKEyWvUkE3Uizj5jw66bDnXEwrJ6OCwVFtRLg_-Gn8UC3pINJYyjqSj9A5wljx3HH5yKqMxsh7_Twx3jfq_EFJ58AQLeB5wqVoXyMExLPRbjMEU64JakERwpgSyhCeGpWg6ZvHr1LnQ43bH-7AHA_Pb7x5cP0LX5tcywIdDjlbfiW_6CttIzEQdYOVuWGH-6HB9fUsSTWiYxoOOwX8o11WQXqs9IkfqJWefCp2tYoJU4UbBdLzdvAEQnUCHHLHswYla6uSGPE_iAmIfGZ6ZkQyg.lqLzy-LxojjRY4mNxBEg2o4_MWY.VfGgXA;
+        path=/; secure; HttpOnly
       Status:
-      - 401 Unauthorized
+      - 200 OK
       Vary:
       - Accept-Encoding
-      Www-Authenticate:
-      - Bearer realm="canvas-lms"
       X-Canvas-Meta:
-      - b=985000;m=985000;u=0.23;y=0.01;d=0.02;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=sections;n=update;t=CourseSection;i=1064;b=1114636;m=1114636;u=0.07;y=0.00;d=0.16;
+      X-Canvas-User-Id:
+      - '42400000000000002'
+      X-Frame-Options:
+      - SAMEORIGIN
       X-Rack-Cache:
       - invalidate, pass
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - fbcc0b77-958f-4ebe-89e1-58945a99f4ca
+      - b6a6a290-0630-4cda-b5eb-41d44caf5ca6
       X-Request-Cost:
-      - '0.2548520030000182'
+      - '0.22547843199999318'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01d488
       X-Runtime:
-      - '0.328592'
+      - '0.258047'
+      X-Session-Id:
+      - baec886eaad77173a45dcb58e562b6c5
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '86'
+      - '153'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"course_id":40,"end_at": "2015-09-03 21:00:00 UTC","id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,
-      "sis_course_id":"9950054","integration_id":null,"sis_import_id":null}'
-    http_version:
-  recorded_at: Mon, 31 Aug 2015 13:39:00 GMT
+      string: '{"course_id":991,"end_at":"2015-09-13T21:00:00Z","id":1064,"name":"Course
+        for Section","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":null,"integration_id":null,"sis_import_id":null}'
+    http_version: 
+  recorded_at: Thu, 10 Sep 2015 15:23:09 GMT
 recorded_with: VCR 2.9.3

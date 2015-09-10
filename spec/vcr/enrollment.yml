@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/accounts/1/enrollments/20211?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK
+    uri: https://softservepartnership.instructure.com/api/v1/accounts/1/enrollments/20371?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP
     body:
       encoding: US-ASCII
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 12:59:56 GMT
+      - Thu, 10 Sep 2015 15:58:50 GMT
       Etag:
-      - '"bf87ebc3dc0e28ce8b59c011c296f317"'
+      - '"ab4644e995caea91cc6349f6048f1b26"'
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=6OGZydLRNI6Tfw8SjY8aMlwKFkN89O11uXhEjYOR5veEzs3w%2BZVf9LwSej3V13AFaHNaLS6Q2BPWEQm55Pi3rw%3D%3D;
+      - _csrf_token=sXto8GyOPudQIMq1ohsf%2BdT1VoCIhO5sn6%2BlD1ARSmyeECaeC7pqtSRXgdr6S1Wj5p8778W0uzTY5eAkFSccLQ%3D%3D;
         path=/; secure
-      - canvas_session=xcCfz28ITgRskYDEssMnVw.wZfHWM7EaFbaOozUkav3HsecqlfivDfo65qr04X16f3gV_NPrK7YMXHmcGHPKC8zGiquPo_EuSCiJ2cEKIrz1nA4wbafS_gkv9tqYZ-4FdVfZ_DfmHcMoCXozmUSlEqa.b8T2aAPqp1TdCtGKOY3Rvz9l_6U.VcnxzA;
+      - canvas_session=8nCq7KJQ6INfgf9vG3g6IQ.jEUQEdn1Igw2et3859Ks_44O2rgd3nX2_1PnxQJ_GNYfQ8lvCmzWpIB2Ij51GYrrPhci2U3RuROQ8TlT6Or_kOUGNIfZ3xA5roRrncPZRTNCHiRckXRqJs2-Xy2jIMK9.wsLLgARiAw4nt7XAmISLK9oOUsk.VfGoug;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=enrollments_api;n=show;t=Account;i=1;b=1046316;m=1046316;u=0.08;y=0.01;d=0.02;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1e;o=enrollments_api;n=show;t=Account;i=1;b=1133696;m=1133696;u=0.06;y=0.00;d=0.04;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -50,26 +50,24 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 236e0ac4-8d58-4bf3-af53-3bb2586401fd
+      - c29d39fd-6712-402e-9ef7-4fd43ccdd357
       X-Request-Cost:
-      - '0.09547382700004092'
+      - '0.09987485900000227'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01d8fa
       X-Runtime:
-      - '0.131219'
+      - '0.122115'
       X-Session-Id:
-      - 7a75e5ea40338c46f07e66ffadadfdb4
+      - a2cb55144955bc88eefa87eb663a9f2d
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '395'
+      - '386'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"associated_user_id":null,"course_id":40,"course_section_id":935,"created_at":"2015-06-17T12:12:20Z","end_at":null,"id":20211,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"StudentEnrollment","updated_at":"2015-08-11T12:40:32Z","user_id":3334,"enrollment_state":"completed","role":"StudentEnrollment","role_id":3,"last_activity_at":"2015-07-07T12:43:44Z","total_activity_time":7428,"sis_import_id":null,"grades":{"html_url":"https://softservepartnership.test.instructure.com/courses/40/grades/3334","current_score":113.33,"final_score":39.14,"current_grade":null,"final_grade":null},"sis_course_id":"9950054","course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.test.instructure.com/courses/40/users/3334"}'
+      string: '{"associated_user_id":null,"course_id":943,"course_section_id":973,"created_at":"2015-08-11T15:10:56Z","end_at":null,"id":20371,"limit_privileges_to_course_section":false,"root_account_id":1,"start_at":null,"type":"StudentEnrollment","updated_at":"2015-08-19T11:23:02Z","user_id":3379,"enrollment_state":"active","role":"StudentEnrollment","role_id":3,"last_activity_at":"2015-09-04T07:54:28Z","total_activity_time":428,"sis_import_id":null,"grades":{"html_url":"https://softservepartnership.instructure.com/courses/943/grades/3379","current_score":64,"final_score":64,"current_grade":null,"final_grade":null},"sis_source_id":null,"sis_course_id":null,"course_integration_id":null,"sis_section_id":null,"section_integration_id":null,"html_url":"https://softservepartnership.instructure.com/courses/943/users/3379"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 12:59:30 GMT
+  recorded_at: Thu, 10 Sep 2015 15:58:50 GMT
 recorded_with: VCR 2.9.3

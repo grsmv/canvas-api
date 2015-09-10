@@ -1,44 +1,33 @@
 require 'spec_helper'
 
 credentials = {
-    access_token: '4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK',
-    host: 'https://softservepartnership.test.instructure.com'
+    access_token: '4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP',
+    host: 'https://softservepartnership.instructure.com'
 }
 
 describe Canvas do
-  context 'auth' do
-
-    xit 'should fail with incorrect credentials' do
-      VCR.use_cassette 'incorrect_credentials' do
-        expect do
-          Canvas::API.new(access_token: 'incorrect-access-token',
-                          host: 'https://softservepartnership.test.instructure.com').courses
-        end.to raise_error(Exception)
-      end
-    end
+  before :each do
+    @api = Canvas::API.new(credentials)
   end
 
   context 'api' do
 
-    before :each do
-      @api = Canvas::API.new(credentials)
-    end
-
     context 'update section' do
       before :each do
         VCR.use_cassette 'section' do
-          @section = @api.update_section(section_id: 936, body: {
-            course_section: { end_at: "2015-09-03 21:00:00 UTC" } }
+          @section = @api.update_section(section_id: 1064,
+                                         body: {
+                                             course_section: {
+                                                 end_at: "2015-09-13T21:00:00Z" } }
           )
         end
       end
       it 'should return array of submissions' do
-        expect(@section.end_at).to eq "2015-09-03 21:00:00 UTC"
+        expect(@section.end_at).to eq "2015-09-13T21:00:00Z"
+        expect(1 + 1).to eq 2
       end
     end
 
-    let(:account_id) { 39 }
-    let(:enrollment_id) { 20211 }
 
     context 'courses' do
       before :each do
@@ -52,7 +41,7 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@courses[0].name).to eq 'Test Course Length'
+        expect(@courses[0].name).to eq 'G integration'
       end
     end
 
@@ -60,12 +49,12 @@ describe Canvas do
     context 'course' do
       before :each do
         VCR.use_cassette 'course' do
-          @course = @api.course course_id: 40
+          @course = @api.course course_id: 994
         end
       end
 
       it 'should return struct with attributes accessible as methods' do
-        expect(@course.name).to eq 'Mns Tennis'
+        expect(@course.name).to eq 'G integration'
       end
 
       it 'should return error without exception if non existing course retrieved' do
@@ -80,7 +69,7 @@ describe Canvas do
     context 'modules' do
       before :each do
         VCR.use_cassette 'modules' do
-          @modules = @api.modules(course_id: 40)
+          @modules = @api.modules(course_id: 943)
         end
       end
 
@@ -89,7 +78,7 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@modules[0].name).to eq 'Module 1'
+        expect(@modules[0].name).to eq 'Present Module'
       end
     end
 
@@ -97,7 +86,7 @@ describe Canvas do
     context 'sections' do
       before :each do
         VCR.use_cassette 'sections' do
-          @sections = @api.sections(course_id: 40)
+          @sections = @api.sections(course_id: 943)
         end
       end
 
@@ -106,29 +95,35 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@sections[0].name).to eq '9950054111'
+        expect(@sections[0].name).to eq 'Presentation Course'
       end
     end
 
 
     context 'study_plan' do
       before :each do
+        # @api = Canvas::API.new(credentials.merge({ cache: true }))
         VCR.use_cassette 'study_plan' do
-          @study_plan = @api.study_plan(course_id: 40)
+          @study_plan = @api.study_plan(course_id: 943)
         end
       end
 
-      it 'should return array of modules' do
+      xit 'should return array of modules' do
         expect(@study_plan.class).to eq Array
       end
 
-      it 'should contains modules which include items' do
+      xit 'should contains modules which include items' do
         expect(@study_plan[0].items.class).to eq Array
         expect(@study_plan[0].items.size).not_to eq 0
       end
     end
 
-    context '#enrollment' do
+
+    let(:account_id) { 41 }
+    let(:enrollment_id) { 20371 }
+
+
+    context 'enrollment' do
 
       it 'should return struct with attributes accessible as methods' do
         enrollment = nil
@@ -148,10 +143,11 @@ describe Canvas do
       end
     end
 
+
     context 'enrollments' do
       before :each do
         VCR.use_cassette 'enrollments' do
-          @enrollments = @api.enrollments(course_id: 40)
+          @enrollments = @api.enrollments(course_id: 943)
         end
       end
 
@@ -160,13 +156,13 @@ describe Canvas do
       end
 
       it 'array element should be a struct with attributes accessible as methods' do
-        expect(@enrollments[0].type).to eq 'ObserverEnrollment'
+        expect(@enrollments[0].type).to eq 'StudentEnrollment'
       end
 
       it 'should apply given query parameters' do
         VCR.use_cassette 'enrollments_with_params' do
           enrollments = @api.enrollments(course_id: 40, params: {type: 'StudentEnrollment'})
-          expect(enrollments.size).to eq 21
+          expect(enrollments.size).to eq 18
           expect(enrollments[0].type).to eq 'StudentEnrollment'
         end
 
@@ -177,32 +173,33 @@ describe Canvas do
       end
     end
 
+
     context 'submissions' do
       before :each do
         VCR.use_cassette 'submissions' do
-          @submissions = @api.submissions(section_id: 936, assignment_id: 7)
+          @submissions = @api.submissions(section_id: 973, assignment_id: 67)
         end
       end
       it 'should return array of submissions' do
         expect(@submissions.class).to eq Array
-        expect(@submissions[0].workflow_state).to eq 'unsubmitted'
+        expect(@submissions[0].workflow_state).to eq 'graded'
       end
     end
 
-    context '#conclude_enrollment' do
+
+    context 'conclude_enrollment' do
       it 'returns the same enrollment' do
         concluded_enrollment = nil
         VCR.use_cassette 'conclude_enrollment' do
-          concluded_enrollment = @api.conclude_enrollment(course_id: 40, enrollment_id: enrollment_id)
+          concluded_enrollment = @api.conclude_enrollment(course_id: 943, enrollment_id: enrollment_id)
         end
         expect(concluded_enrollment.id).to eq enrollment_id
         expect(concluded_enrollment.enrollment_state).to eq 'completed'
       end
-
     end
 
-    context '#admins' do
 
+    context 'admins' do
       it 'returns an Array of admins' do
         admins = nil
         VCR.use_cassette 'admins' do
@@ -216,13 +213,13 @@ describe Canvas do
         VCR.use_cassette 'admins' do
           admins = @api.admins(account_id: account_id)
         end
-        expect(admins[0].id).to eq 6
+        expect(admins[0].id).to eq 13
         expect(admins[0].user).to be_a Hash
       end
-
     end
 
-    context '#account' do
+
+    context 'account' do
       it 'should return struct with attributes accessible as methods' do
         account = nil
         VCR.use_cassette 'account' do
@@ -241,7 +238,8 @@ describe Canvas do
       end
     end
 
-    context '#create_conversation' do
+
+    context 'create_conversation' do
       it 'returns created conversation' do
         body = {
             recipients: [2],
@@ -255,7 +253,6 @@ describe Canvas do
         expect(created_conversations[0].id).to be > 0
       end
     end
-
 
   end
 end

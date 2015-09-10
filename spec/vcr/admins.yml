@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/accounts/39/admins?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000
+    uri: https://softservepartnership.instructure.com/api/v1/accounts/41/admins?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP&page=1&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,29 +23,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 12:40:33 GMT
+      - Thu, 10 Sep 2015 16:07:39 GMT
       Etag:
-      - '"3cf4ba8c2f5c5992d98a45dace533896"'
+      - '"622d50c9eb4de92557144421e078225b"'
       Link:
-      - <https://softservepartnership.test.instructure.com/api/v1/accounts/39/admins?page=1&per_page=100>;
-        rel="current",<https://softservepartnership.test.instructure.com/api/v1/accounts/39/admins?page=1&per_page=100>;
-        rel="first",<https://softservepartnership.test.instructure.com/api/v1/accounts/39/admins?page=1&per_page=100>;
+      - <https://softservepartnership.instructure.com/api/v1/accounts/41/admins?page=1&per_page=100>;
+        rel="current",<https://softservepartnership.instructure.com/api/v1/accounts/41/admins?page=1&per_page=100>;
+        rel="first",<https://softservepartnership.instructure.com/api/v1/accounts/41/admins?page=1&per_page=100>;
         rel="last"
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=qFYVgubmmSliY9qAKUOsRvgETYyMO6%2BOGQ3a0yaG10KbGH7NsNfwbSBX6spmBcFyqX0Uytpa4vlwRu6YY%2BiQIA%3D%3D;
+      - _csrf_token=F8fK0CWAPJJeFtFKwB5r7t%2B10RzWKYuxd933XAV4QmNCjZ2fZ8YIogpmogCmUB6hk9C0c7wb8v01lZA3VT0tUQ%3D%3D;
         path=/; secure
-      - canvas_session=2Oxk4vwi0ltTjm6jTd7XEQ.j05IOj1jMTuzMq1E8xcBOmiLMtNbnp3jhW7zezErp2sf6CaQH3npGwP4EdDMAleQuYUwGI3RUx0WsNAe7Y73_VAR5yX4rgdgqFa85tyBErQVnfd4b0OpjKLGrj8R6j6g.i-HfQJPFXiFdoYsmgUA1infzBLw.VcntQg;
+      - canvas_session=KnTfYtRwEY7bwrqtLfXrzA.Q35QbS3VdDYhCL3ZNMVj-NJRd8j0pLAYvNnYWQowAYjcAq9M9JYML4-yqdz4bqaF3WZrA5U-rSI113rDPb1Is0VnnPQNCLOGZpaLJ2L4VjRCMc2qIFV0v28fDaFjhm0n.30XmJsnPQSjqDRQDnjk0xIT7IoQ.VfGqzA;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=admins;n=index;t=Account;i=39;b=980704;m=980704;u=0.14;y=0.00;d=0.04;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1c;o=admins;n=index;t=Account;i=41;b=1133584;m=1133584;u=0.12;y=0.01;d=0.15;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -55,26 +55,25 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 19dfabae-a382-4761-b22c-d04e099b85b2
+      - 3916d6e6-c3bf-4779-8932-9fad776b4511
       X-Request-Cost:
-      - '0.18299267600010005'
+      - '0.2685519290000046'
       X-Request-Processor:
-      - a023dbc
-      X-Robots-Tag:
-      - none
+      - a01d3ed
       X-Runtime:
-      - '0.362838'
+      - '0.293838'
       X-Session-Id:
-      - dedbd6ac4e6b80ca2d022533140045d9
+      - 0b0197bd3a13db10815bde7c4104d6c3
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '157'
+      - '184'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"id":6,"role":"AccountAdmin","role_id":1,"user":{"id":2,"name":"divanov@softserveinc.com","sortable_name":"divanov@softserveinc.com","short_name":"divanov@softserveinc.com","sis_user_id":"isok","integration_id":null,"sis_login_id":"isok@softserveinc.com","sis_import_id":null,"login_id":"isok@softserveinc.com"}}]'
+      string: '[{"id":13,"role":"AccountAdmin","role_id":1,"user":{"id":3400,"name":"Oleh
+        Kolodii","sortable_name":"Kolodii, Oleh","short_name":"Oleh Kolodii","login_id":"okolod@softserveinc.com"}},{"id":14,"role":"AccountAdmin","role_id":1,"user":{"id":3780,"name":"admi.canvas@gmail.com","sortable_name":"admi.canvas@gmail.com","short_name":"admi.canvas@gmail.com","login_id":"admi.canvas@gmail.com"}}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 12:40:07 GMT
+  recorded_at: Thu, 10 Sep 2015 16:07:40 GMT
 recorded_with: VCR 2.9.3
