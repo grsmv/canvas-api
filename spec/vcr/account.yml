@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/accounts/39?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK
+    uri: https://softservepartnership.instructure.com/api/v1/accounts/41?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP
     body:
       encoding: US-ASCII
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 12:40:34 GMT
+      - Thu, 10 Sep 2015 16:08:34 GMT
       Etag:
-      - '"1a601e787a71675e5f63839c977a136e"'
+      - '"150868e6d7a65fc3e38bc1c1c38a6868"'
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=x46R9T1md06hMusvqOvTIleQNiXumbGKa%2BRDCvVG3ef1vdmscwAlAegB3Ufl3b1KOr8dUoj18PMjkCBHoBTutw%3D%3D;
+      - _csrf_token=2EPGZbzpUilVv7Kg%2BPxjRejBnCSutji3nqz5Y%2FmMB%2BqaDqVOjo43HTDL9%2B7BriEPpZH%2BR8jcXIWty9ILi89LhA%3D%3D;
         path=/; secure
-      - canvas_session=_D2_f4pDDStKMRAv3VhFSQ.XCtTdy1rGHtfAizT-tc_i4_QRUphqdeJCoxHvcEX9gCX8LAalEfelg03kIvAbkA62Bmfa1CK1h5NluzXklASXGzMizp4oqs9syE_aRUDlW1ehcvmTBYD8O6TSZmv28AJ.lr7Uj8L4WcRZXLItPy5-CnI4NMk.VcntQg;
+      - canvas_session=cTaWhAebo4TPmyuBUwiqHQ._FWysBTZxyhT7sJWIHcPW9kPXN9WArwML1ud38yS7k2U3FM4EPY0p7qWgvQFHSSKKXGyFysvXYUFLQz_VS6kR03AnssemssOdQEJlC2U_Opghv3x7I907dTuwpynls6D.BA9Q9F__u6Ya8nCObAdh-1i6Fs4.VfGrAg;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=accounts;n=show;t=Account;i=39;b=1046316;m=1046316;u=0.11;y=0.00;d=0.01;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1e;o=accounts;n=show;t=Account;i=41;b=1065972;m=1065972;u=0.14;y=0.01;d=0.06;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -50,26 +50,24 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 954c3bdd-44d4-4f2d-878f-f698f6a00e69
+      - 5a4f2b4c-c60c-48ab-a6cf-26c29c579c5c
       X-Request-Cost:
-      - '0.12155640700001365'
+      - '0.19976782599998638'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01d815
       X-Runtime:
-      - '0.158605'
+      - '0.230473'
       X-Session-Id:
-      - 10c7e6598eb10a9f08dc032a63229055
+      - eca5550e66b11e1d73d5b3b43597a23c
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '199'
+      - '188'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"id":39,"name":"Aeries Continuation School","parent_account_id":1,"root_account_id":1,"workflow_state":"active","default_storage_quota_mb":500,"default_user_storage_quota_mb":50,"default_group_storage_quota_mb":50,"default_time_zone":"America/Denver","sis_account_id":"995","sis_import_id":61,"integration_id":null}'
+      string: '{"id":41,"name":"Manually-Created Courses","parent_account_id":1,"root_account_id":1,"workflow_state":"active","default_storage_quota_mb":500,"default_user_storage_quota_mb":50,"default_group_storage_quota_mb":50,"default_time_zone":"America/Denver","sis_account_id":null,"sis_import_id":null,"integration_id":null}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 12:40:08 GMT
+  recorded_at: Thu, 10 Sep 2015 16:08:35 GMT
 recorded_with: VCR 2.9.3

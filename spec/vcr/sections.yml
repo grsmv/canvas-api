@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://softservepartnership.test.instructure.com/api/v1/courses/40/sections?access_token=4240~40Bxj0T7ovfNeNvoB9oLl6k480vIJbAbUA6HvLOit27Rbb74w06HY7zchj179woK&per_page=10000
+    uri: https://softservepartnership.instructure.com/api/v1/courses/943/sections?access_token=4240~JdXebCtElIBHsTtITdcIZ4JSD6l6i9MlOej8CY288w88GbREWIdg4XI74m4UrlrP&page=1&per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 11 Aug 2015 12:40:22 GMT
+      - Thu, 10 Sep 2015 15:46:41 GMT
       Etag:
-      - '"af21314421c0cbbe09bf94a39899a528"'
+      - '"5abe8b489fe3d00016608e488ab89b54"'
       P3p:
       - CP="None, see http://www.instructure.com/privacy-policy"
       Server:
       - Apache
       Set-Cookie:
-      - _csrf_token=kMfxU6%2B2rrNjID%2F7nEkhPOuq1x0j2P4ngpHXJ%2F0XUZvSjNoUxtfB4lpGds7SIRgKkuTkaVKun2PU%2Fr8SsVQDow%3D%3D;
+      - _csrf_token=Wn0vdvcOlF%2FwyMLgk%2BPlOTHTvPrF0mc8HE9c%2F6fZ22wDSnw6sGP%2FFLGuhKnkmt1PAJvmjZSmKntuB3OM76ieBg%3D%3D;
         path=/; secure
-      - canvas_session=C-j747cIFFRrM7smAG9BTQ.WufgSEQfcxDKQ7sRO5jXU_I1kYck3OJozxnAMPrKKepndoi7UPryPs4mVyF0VXm3tpW_O5pyXPqg-V1-Ixb7KHquCw_VZZFDAq-onmHeI3f3r2lU9Cs2FYJteHp2Usm7.ykC9wnNjSmOPP8HNfLxXeMAPw_Q.VcntNg;
+      - canvas_session=oNQ8E7m2gUUboQnsII8Tvw.oMUDmvUvjyUnG3mh982d8eSnaRCCaZq7mZV0WC1D9514E6esuBcw3zRaft67840y8L8y48vrMCRMTvDR3cyL1foO13PlrinXeU5ZcuY55HnYbk_GCXM0CcrAXVUj8ZsB.ZN7b_ANEW_9bPPHs1aPXTjsqTHg.VfGl4Q;
         path=/; secure; HttpOnly
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       X-Canvas-Meta:
-      - at=42400000000000051;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1b;o=sections;n=index;t=Course;i=40;b=980904;m=980904;u=0.23;y=0.01;d=0.05;
+      - at=42400000000000046;dk=170000000000016;a=1;g=0TwsOgwvINdaPhg55CEOoZ8bSqS15XUt4B7T0mkp;s=4240;c=cluster35;z=us-east-1e;o=sections;n=index;t=Course;i=943;b=1202312;m=1202312;u=0.07;y=0.00;d=0.04;
       X-Canvas-User-Id:
       - '42400000000000002'
       X-Frame-Options:
@@ -50,32 +50,26 @@ http_interactions:
       X-Rate-Limit-Remaining:
       - '700'
       X-Request-Context-Id:
-      - 1d847056-06c1-46cd-9fdc-64f64bc1057a
+      - 34d4c83f-710f-4bd9-a258-f24e0ad0d0ea
       X-Request-Cost:
-      - '0.2809027300000182'
+      - '0.11184993300005003'
       X-Request-Processor:
-      - a023c27
-      X-Robots-Tag:
-      - none
+      - a01d815
       X-Runtime:
-      - '0.407189'
+      - '0.130107'
       X-Session-Id:
-      - b008ea1da15216c1cd58952021f5a81a
+      - 9aec95850891b1e9fc154a2640ad57d3
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
-      - '300'
+      - '165'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '[{"course_id":40,"end_at": "2015-09-03 21:00:00 UTC","id":935,"name":"9950054111","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":936,"name":"9950054222","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":944,"name":"test
-        default","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":945,"name":"Test
-        Section 1","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-08-01T06:00:00Z","id":948,"name":"Sec3
-        Try to clone","nonxlist_course_id":null,"start_at":"2015-07-30T06:00:00Z","sis_section_id":"12345","sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":"2015-09-30T06:00:00Z","id":946,"name":"Section
-        with Due date Sep30","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":949,"name":"Sec
-        3 clone","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":954,"name":"NewSectionForTest","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null},{"course_id":40,"end_at":null,"id":947,"name":"Sec2
-        TestClone","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":"9950054","integration_id":null,"sis_import_id":null}]'
-    http_version:
-  recorded_at: Tue, 11 Aug 2015 12:39:56 GMT
+      string: '[{"course_id":943,"end_at":null,"id":972,"name":"Presentation Course","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":null,"integration_id":null,"sis_import_id":null},{"course_id":943,"end_at":null,"id":973,"name":"Student
+        group 1","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":null,"integration_id":null,"sis_import_id":null},{"course_id":943,"end_at":null,"id":974,"name":"Student
+        group 2","nonxlist_course_id":null,"start_at":null,"sis_section_id":null,"sis_course_id":null,"integration_id":null,"sis_import_id":null}]'
+    http_version: 
+  recorded_at: Thu, 10 Sep 2015 15:46:41 GMT
 recorded_with: VCR 2.9.3
