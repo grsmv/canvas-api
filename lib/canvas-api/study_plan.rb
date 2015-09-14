@@ -58,15 +58,19 @@ module Canvas
 
     def fill_due_dates(course_id, items)
       update_item = lambda do |item|
+
         item.tap do |item|
           if self.class.assignment?(item)
-            assignment_details = self.send(item.type.downcase,
-                                           course_id: course_id,
-                                           content_id: item.content_id)
+            assignment_details = self.assignment(
+                course_id: course_id,
+                content_id: item.type == 'Assignment' ? item.content_id : item.id)
+
             item.due_dates = [{student_id: 0, due_at: assignment_details.due_at}]
 
-            overrides = self.assignment_overrides(course_id: course_id,
-                                                  assignment_id: item.content_id)
+            overrides = self.assignment_overrides(
+                course_id: course_id,
+                assignment_id: item.type == 'Assignment' ? item.content_id : item.id)
+
             unless overrides.nil?
               item.due_dates += expand_due_dates_for_students(overrides)
             end
